@@ -1,0 +1,20 @@
+/*--------------------------*/
+/* Hero
+/*--------------------------*/
+
+
+.tahiti-wrapper {
+	
+	.hero {
+		position: relative;
+		max-width: 1600px;
+		margin: 0 auto;
+		font-size: 0;
+		height: auto;
+	}
+		
+	.hero--img {
+		@include object-fit();
+	}
+
+}

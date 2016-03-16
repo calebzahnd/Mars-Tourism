@@ -1,0 +1,28 @@
+/*--------------------------*/
+/* Feature
+/*--------------------------*/
+
+.tahiti-wrapper {
+	
+	.feature {
+		position: relative;
+		max-width: 1600px;
+		margin: 0 auto;
+		font-size: 0;
+	}
+	
+	.feature--container {
+		@include make-container();
+		
+		@include screen-lg {
+			position: absolute;
+			top: -20%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+		
+	.feature--img {
+		@include object-fit();
+	}
+}

@@ -1,0 +1,61 @@
+/**********/
+/* Buttons
+/**********/
+
+//Alternative mixin to Bootstrap button-varient mixin
+@mixin new-button($color, $background, $border) {
+	@include font-body(14px);
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+    padding: 15px 20px;
+    
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		color: $color;
+		background-color: lighten($background, 10%);
+		border-color: lighten($border, 10%);
+	}
+	
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-image: none;
+		box-shadow: none;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			background-color: $background;
+			border-color: $border;
+		}
+ 	}
+	
+	.badge {
+		color: $background;
+		background-color: $color;
+	}
+  
+}
+
+
+
+.btn, a.btn {
+	@include new-button( $white, $blue-dark, $blue-dark);
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+

@@ -1,0 +1,43 @@
+/*--------------*/
+/* Typography
+/*--------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Satisfy|Oswald:400,700');
+
+$font-family-sans-serif:	'Lato', sans-serif;
+$font-family-headline:		'Oswald', sans-serif;
+$font-family-script:		'Satisfy', cursive;
+
+@mixin font-body($font-size: 16px) {
+	font-family: $font-family-sans-serif;
+	font-size: $font-size;
+	line-height: 26px;
+	letter-spacing: -0.15px;
+}
+
+@mixin font-headline($font-size: 72px) {
+	font-family: $font-family-headline;
+	font-size: $font-size;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+}
+
+@mixin font-script($font-size: 16px) {
+	font-family: $font-family-script;
+	font-size: $font-size;
+}
+
+
+html, body {
+	font-family: $font-family-sans-serif;
+}
+
+a {
+	&,
+	&:link,
+	&:active,
+	&:hover,
+	&:visited {
+		text-decoration: none;
+	}
+}
