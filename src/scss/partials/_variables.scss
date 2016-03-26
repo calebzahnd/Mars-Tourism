@@ -6,19 +6,18 @@
 $susy: (
 	columns: 12,
 	gutters: 1,
-	container: 1000px,
+	container: 1440px,
 	gutter-position: inside,
-	global-box-sizing: border-box,
-	debug: (
-		image: show,
-		color: rgba(blue, .125),
-		output: background
-	)
+	global-box-sizing: border-box
 );
 
 //Colors
 $black:				#000000;
 $white:				#ffffff;
+$red:				#ea4a36;
+$purple:			#362336;
+
+
 $yellow:			#c3b833;
 $blue-dark:			#104465;
 $blue-light:		#0098bd;

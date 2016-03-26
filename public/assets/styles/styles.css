@@ -14,7 +14,7 @@
 /*********/
 /* Mixins
 /*********/
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Satisfy|Oswald:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Fjalla+One');
 .clearfix
 {
     *zoom: 1;
@@ -37,6 +37,8 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html
 {
+    font-size: 62.5%; 
+
     box-sizing: border-box;
 }
 
@@ -47,15 +49,9 @@ html
     box-sizing: inherit;
 }
 
-.tahiti-wrapper
+body
 {
-    font-size: 16px;
-    font-size: 1.6rem;
-
-    overflow-x: hidden; 
-
-    color: #4c4c4c;
-    background: #dbeef4;
+    margin: 0;
 }
 
 .container,
@@ -63,16 +59,25 @@ html
 {
     position: relative;
 
-    max-width: 1080px;
+    max-width: 1400px;
 }
 
 /*--------------*/
 /* Typography
 /*--------------*/
+@font-face
+{
+    font-family: 'Regular-Bold';
+    font-weight: normal;
+    font-style: normal; 
+
+    src: url('/assets/media/fonts/regular-bold/Regular-Bold.eot?#iefix') format('embedded-opentype'), url('/assets/media/fonts/regular-bold/Regular-Bold.otf') format('opentype'), url('/assets/media/fonts/regular-bold/Regular-Bold.woff') format('woff'), url('/assets/media/fonts/regular-bold/Regular-Bold.ttf') format('truetype'), url('/assets/media/fonts/regular-bold/Regular-Bold.svg#Regular-Bold') format('svg');
+}
+
 html,
 body
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a,
@@ -90,7 +95,7 @@ a:visited
 .btn,
 a.btn
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-size: 16px;
     line-height: 26px;
@@ -270,22 +275,22 @@ a.btn .badge
 }
 .tahiti-wrapper .booking--content em
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Regular-Bold', sans-serif;
     font-size: 35px;
     font-style: normal; 
+    line-height: 1;
 
     display: block;
 
     margin-bottom: 15px;
 
-    letter-spacing: -1px;
-    text-transform: uppercase;
+    letter-spacing: -1.7px;
 
     color: #c3b833;
 }
 .tahiti-wrapper .booking--content ul
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
 
@@ -297,7 +302,7 @@ a.btn .badge
 }
 .tahiti-wrapper .booking--content p
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
 
@@ -334,24 +339,58 @@ a.btn .badge
 /*--------------------------*/
 /* Hero
 /*--------------------------*/
-.tahiti-wrapper .hero
+.hero
 {
-    font-size: 0;
+    max-width: 1440px;
+    margin-right: auto; 
+    margin-left: auto;
+}
+.hero:after
+{
+    display: block;
+    clear: both; 
 
-    position: relative;
-
-    max-width: 1600px;
-    height: auto; 
-    margin: 0 auto;
+    content: ' ';
 }
 
-.tahiti-wrapper .hero--img
+.hero--img
 {
     width: 100%;
     height: 100%; 
 
     object-fit: cover;
     object-position: center center;
+}
+
+.hero--logo
+{
+    position: absolute;
+    top: 46px;
+    left: 53px;
+
+    width: 163px;
+}
+
+.hero--content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    color: #fff;
+}
+
+.hero--h1
+{
+    font-family: 'Regular-Bold', sans-serif;
+    font-size: 90px;
+    line-height: 1;
+
+    text-align: center; 
+    letter-spacing: -1.7px;
 }
 
 /*--------------------------*/
@@ -478,16 +517,16 @@ a.btn .badge
 }
 .tahiti-wrapper .intro--content h1
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Regular-Bold', sans-serif;
     font-size: 58px;
+    line-height: 1;
 
     position: relative;
 
     margin: 0 0 35px;
 
     text-align: center; 
-    letter-spacing: -1px;
-    text-transform: uppercase;
+    letter-spacing: -1.7px;
 
     color: #c3b833;
 }
@@ -509,7 +548,7 @@ a.btn .badge
 }
 .tahiti-wrapper .intro--content h1 span
 {
-    font-family: 'Satisfy', cursive;
+    font-family: 'Fjalla+One', sans-serif;
     font-size: 51px;
 
     display: block;
@@ -544,7 +583,7 @@ a.btn .badge
 }
 .tahiti-wrapper .intro--content p
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
 
@@ -596,8 +635,9 @@ a.btn .badge
 
 .tahiti-wrapper .intro--sidebar--promo
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Regular-Bold', sans-serif;
     font-size: 48px;
+    line-height: 1;
 
     position: relative;
 
@@ -606,8 +646,7 @@ a.btn .badge
     margin-bottom: 60px; 
     padding-top: 30px;
 
-    letter-spacing: -1px;
-    text-transform: uppercase;
+    letter-spacing: -1.7px;
 
     color: #999;
     border-top: 4px solid #999;
@@ -641,15 +680,15 @@ a.btn .badge
 }
 .tahiti-wrapper .itinerary h2
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Regular-Bold', sans-serif;
     font-size: 36px;
+    line-height: 1;
     line-height: 1;
 
     margin: 0 0 5px;
 
     text-align: center; 
-    letter-spacing: -1px;
-    text-transform: uppercase;
+    letter-spacing: -1.7px;
 
     color: #c3b833;
 }
@@ -668,7 +707,7 @@ a.btn .badge
 }
 .tahiti-wrapper .itinerary h3
 {
-    font-family: 'Satisfy', cursive;
+    font-family: 'Fjalla+One', sans-serif;
     font-size: 26px;
 
     margin: 0 0 30px;
@@ -688,7 +727,7 @@ a.btn .badge
 }
 .tahiti-wrapper .itinerary h4
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 26px;
@@ -701,7 +740,7 @@ a.btn .badge
 }
 .tahiti-wrapper .itinerary p
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
 
@@ -730,20 +769,20 @@ a.btn .badge
 }
 .tahiti-wrapper .itinerary .itinerary--details--price
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Regular-Bold', sans-serif;
     font-size: 22px;
+    line-height: 1;
 
     margin-right: 15px;
 
-    letter-spacing: -1px;
-    text-transform: uppercase;
+    letter-spacing: -1.7px;
     text-transform: none; 
 
     color: #104465;
 }
 .tahiti-wrapper .itinerary .itinerary--details--airfare
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
 
@@ -762,14 +801,14 @@ a.btn .badge
 }
 .tahiti-wrapper .itinerary .itinerary--itinerary-title
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Regular-Bold', sans-serif;
     font-size: 22px;
+    line-height: 1;
 
     margin: 0 0 10px;
     padding-top: 35px; 
 
-    letter-spacing: -1px;
-    text-transform: uppercase;
+    letter-spacing: -1.7px;
 
     color: #c3b833;
 }
@@ -813,7 +852,7 @@ a.btn .badge
 }
 .tahiti-wrapper .itinerary ul li
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
 
@@ -1050,7 +1089,7 @@ a.btn .badge
 }
 .tahiti-wrapper .quote p
 {
-    font-family: 'Satisfy', cursive;
+    font-family: 'Fjalla+One', sans-serif;
     font-size: 45px;
 
     margin: 60px 0 15px; 
@@ -1059,7 +1098,7 @@ a.btn .badge
 }
 .tahiti-wrapper .quote .quote--source
 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
 

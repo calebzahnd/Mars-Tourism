@@ -3,18 +3,27 @@
 /*--------------------------*/
 
 
-.tahiti-wrapper {
+.hero {
+	@include container();
+}
 	
-	.hero {
-		position: relative;
-		max-width: 1600px;
-		margin: 0 auto;
-		font-size: 0;
-		height: auto;
-	}
-		
-	.hero--img {
-		@include object-fit();
-	}
+.hero--img {
+	@include object-fit();
+}
 
+.hero--logo {
+	position: absolute;
+	left: 53px;
+	top: 46px;
+	width: 163px;
+}
+
+.hero--content {
+	@include centerer();
+	color: $white;
+}
+
+.hero--h1 {
+	@include font-headline(90px);
+	text-align: center;
 }

@@ -7,18 +7,6 @@ var styles_dest	= 'public/assets/styles/'; // Destination to send your compiled 
 
 // Array of Javascript files to concatenate and minify
 var js_concat = [
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
-    //'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
-	//'src/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
 	'src/vendor/enquire/dist/enquire.js',
 	'src/js/scripts.js',
 ];

@@ -2,28 +2,40 @@
 /* Typography
 /*--------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Satisfy|Oswald:400,700');
 
-$font-family-sans-serif:	'Lato', sans-serif;
-$font-family-headline:		'Oswald', sans-serif;
-$font-family-script:		'Satisfy', cursive;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Fjalla+One');
 
-@mixin font-body($font-size: 16px) {
+@font-face {
+  font-family: 'Regular-Bold';
+  src:  url('/assets/media/fonts/regular-bold/Regular-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/assets/media/fonts/regular-bold/Regular-Bold.otf')  format('opentype'),
+		url('/assets/media/fonts/regular-bold/Regular-Bold.woff') format('woff'),
+		url('/assets/media/fonts/regular-bold/Regular-Bold.ttf')  format('truetype'),
+		url('/assets/media/fonts/regular-bold/Regular-Bold.svg#Regular-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-family-sans-serif:	'Open Sans', sans-serif;
+$font-family-headline:		'Regular-Bold', sans-serif;
+$font-family-alt-headline:	'Fjalla+One', sans-serif;
+
+@mixin font-body($font-size: inherit) {
 	font-family: $font-family-sans-serif;
 	font-size: $font-size;
 	line-height: 26px;
 	letter-spacing: -0.15px;
 }
 
-@mixin font-headline($font-size: 72px) {
+@mixin font-headline($font-size: inherit) {
 	font-family: $font-family-headline;
 	font-size: $font-size;
-	letter-spacing: -1px;
-	text-transform: uppercase;
+	letter-spacing: -1.7px;
+    line-height: 1;
 }
 
-@mixin font-script($font-size: 16px) {
-	font-family: $font-family-script;
+@mixin font-alt-headline($font-size: inherit) {
+	font-family: $font-family-alt-headline;
 	font-size: $font-size;
 }
 
