@@ -957,7 +957,7 @@
 var main = {
 
 	initialize: function () {
-        main.objectFit();
+        //main.objectFit();
         main.intro();
         main.landscape();
         main.details();
@@ -976,7 +976,7 @@ var main = {
     objectFit: function() {
 
 		if ( ! Modernizr.objectfit ) {
-			$('.object-fit').each(function () {
+			$('img.object-fit').each(function () {
 			  
 				var src = jQuery(this).attr('src');
 				
@@ -1037,7 +1037,7 @@ var main = {
         function detailsPosition() {
 			var detailsHeight = $('.details').outerHeight();
 
-			$('.details').css('margin-top', (detailsHeight / -2) + 'px').css('margin-bottom', (detailsHeight / -2) + 'px');
+			$('div.details').css('margin-top', (detailsHeight / -2) + 'px').css('margin-bottom', (detailsHeight / -2) + 'px');
 			//$('.properties--column-filter').affix('checkPosition');
 		}
 		

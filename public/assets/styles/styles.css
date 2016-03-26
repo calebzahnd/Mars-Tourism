@@ -434,7 +434,7 @@ a.btn .badge
 /*--------------------------*/
 /* Intro
 /*--------------------------*/
-.details
+div.details
 {
     position: relative;
     z-index: 50;
@@ -457,21 +457,21 @@ a.btn .badge
 
     *zoom: 1;
 }
-.details:after
+div.details:after
 {
     display: block;
     clear: both; 
 
     content: ' ';
 }
-.details:before,
-.details:after
+div.details:before,
+div.details:after
 {
     display: table; 
 
     content: ' ';
 }
-.details:after
+div.details:after
 {
     clear: both;
 }
