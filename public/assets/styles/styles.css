@@ -74,7 +74,7 @@
     }
 }
 
-@media only screen and (min-width: 1440px)
+@media only screen and (min-width: 1441px)
 {
     .cz
     {
@@ -119,6 +119,8 @@ html
 body
 {
     margin: 0;
+
+    background: #000;
 }
 
 .container,
@@ -191,11 +193,11 @@ a.btn
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 
     padding: 15px 20px;
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
     letter-spacing: 1px; 
     text-transform: uppercase;
 
@@ -377,7 +379,7 @@ a.btn .badge
 
     margin-bottom: 15px;
 
-    letter-spacing: -1.7px;
+    letter-spacing: .6px;
 
     color: #c3b833;
 }
@@ -385,23 +387,23 @@ a.btn .badge
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 
     padding: 0 0 0 20px;
 
     list-style: inherit;
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
 }
 .tahiti-wrapper .booking--content p
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 
     margin: 0; 
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
 
     color: #999;
 }
@@ -430,62 +432,185 @@ a.btn .badge
 }
 
 /*--------------------------*/
-/* Hero
+/* Intro
 /*--------------------------*/
-.hero
+.details
 {
-    position: relative; 
+    position: relative;
+    z-index: 50;
+    left: 50% !important;
 
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 66.66667%;
     max-width: 2650px;
+    max-width: 1550px;
     margin-right: auto;
     margin-left: auto;
+
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%); 
+
+    border: 19px solid rgba(255, 255, 255, .06);
+
+    *zoom: 1;
 }
-.hero:after
+.details:after
 {
     display: block;
     clear: both; 
 
     content: ' ';
 }
+.details:before,
+.details:after
+{
+    display: table; 
 
-.hero--img
+    content: ' ';
+}
+.details:after
+{
+    clear: both;
+}
+
+.details--wrapper
+{
+    background: linear-gradient(135deg, #362336 0%, #ea4a36 100%);
+}
+
+.intro--content
+{
+    position: relative;
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    width: 50%;
+
+    color: #fff; 
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+            order: 2;
+}
+.intro--content .intro--copy
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%; 
+    padding: 70px;
+
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.intro--content h3
+{
+    font-family: 'Regular-Bold', sans-serif;
+    font-size: 34px;
+    line-height: 1;
+
+    position: relative;
+
+    margin: 0;
+
+    letter-spacing: .6px;
+    text-transform: lowercase;
+}
+@media only screen and (min-width: 1441px)
+{
+    .intro--content h3
+    {
+        font-size: 44px;
+        font-size: 4.4rem;
+    }
+}
+.intro--content p
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+
+    letter-spacing: 0;
+}
+@media only screen and (min-width: 1441px)
+{
+    .intro--content p
+    {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+}
+.intro--content .intro--cta
+{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+
+    letter-spacing: 4px;
+    text-transform: uppercase; 
+
+    color: #ea4a36;
+}
+
+.intro--image
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 50%;
+
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+            order: 1;
+}
+.intro--image img
 {
     width: 100%;
+    max-width: 100%;
     height: 100%; 
 
     object-fit: cover;
     object-position: center center;
 }
 
-.hero--logo
-{
-    position: absolute;
-    top: 46px;
-    left: 53px;
-
-    width: 163px;
-}
-
-.hero--content
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-
-    color: #fff;
-}
-
-.hero--h1
+.intro--sidebar--promo
 {
     font-family: 'Regular-Bold', sans-serif;
-    font-size: 90px;
+    font-size: 48px;
     line-height: 1;
 
-    text-align: center; 
-    letter-spacing: -1.7px;
+    position: relative;
+
+    display: block;
+
+    margin-bottom: 60px; 
+    padding-top: 30px;
+
+    letter-spacing: .6px;
+
+    color: #999;
+    border-top: 4px solid #999;
+}
+.intro--sidebar--promo:after
+{
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+
+    width: 45px;
+
+    content: ' ';
+
+    border-top: 1px solid #999;
 }
 
 /*--------------------------*/
@@ -544,21 +669,137 @@ a.btn .badge
 }
 
 /*--------------------------*/
+/* Hero
+/*--------------------------*/
+.hero
+{
+    font-size: 0;
+
+    position: relative;
+    z-index: 10; 
+
+    max-width: 2650px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.hero:after
+{
+    display: block;
+    clear: both; 
+
+    content: ' ';
+}
+
+.hero--img
+{
+    position: relative;
+    z-index: 12; 
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+.hero--logo
+{
+    position: absolute;
+    top: 46px;
+    left: 53px;
+
+    width: 163px;
+}
+
+.hero--content
+{
+    position: absolute;
+    z-index: 13; 
+    top: 50%;
+    left: 50%;
+    left: 50% !important;
+
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    color: #fff;
+}
+
+.hero--h1
+{
+    font-family: 'Regular-Bold', sans-serif;
+    font-size: 90px;
+    line-height: 1;
+
+    text-align: center;
+    letter-spacing: .6px;
+    letter-spacing: -1.7px;
+}
+
+.hero--h2
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 100; 
+    line-height: 24px;
+
+    text-align: center;
+    letter-spacing: 0;
+}
+
+.hero--stars--1
+{
+    position: absolute;
+    z-index: 11; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: url('/assets/media/images/mars-hero-stars-1.png');
+    background-repeat: repeat;
+}
+
+.hero--stars--2
+{
+    position: absolute;
+    z-index: 11; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+
+    background: url('/assets/media/images/mars-hero-stars-1.png');
+    background-repeat: repeat;
+}
+
+/*--------------------------*/
 /* Intro
 /*--------------------------*/
 .intro
 {
+    position: fixed;
+    z-index: 50;
+    left: 50% !important;
+
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
 
-    width: 60%;
+    width: 66.66667%;
     max-width: 2650px;
-    max-width: 939px;
+    max-width: 1550px;
     margin-right: auto;
     margin-left: auto;
 
-    border: 19px solid rgba(255, 255, 255, .06); 
+    -webkit-transform: translateX(-50%) translateY(15%);
+            transform: translateX(-50%) translateY(15%); 
+
+    opacity: 0;
+    border: 19px solid rgba(255, 255, 255, .06);
 
     *zoom: 1;
 }
@@ -580,9 +821,18 @@ a.btn .badge
 {
     clear: both;
 }
+.dom-ready .intro
+{
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0); 
+
+    opacity: 1;
+}
 
 .intro--content
 {
+    position: relative;
+
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
@@ -599,6 +849,18 @@ a.btn .badge
     -ms-flex-order: 2;
             order: 2;
 }
+.intro--content .intro--copy
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%; 
+    padding: 70px;
+
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
 .intro--content h3
 {
     font-family: 'Regular-Bold', sans-serif;
@@ -607,17 +869,44 @@ a.btn .badge
 
     position: relative;
 
-    margin: 0 0 35px; 
+    margin: 0;
 
-    letter-spacing: -1.7px;
+    letter-spacing: .6px;
+    text-transform: lowercase;
+}
+@media only screen and (min-width: 1441px)
+{
+    .intro--content h3
+    {
+        font-size: 44px;
+        font-size: 4.4rem;
+    }
 }
 .intro--content p
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
+}
+@media only screen and (min-width: 1441px)
+{
+    .intro--content p
+    {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+}
+.intro--content .intro--cta
+{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+
+    letter-spacing: 4px;
+    text-transform: uppercase; 
+
+    color: #ea4a36;
 }
 
 .intro--image
@@ -631,6 +920,15 @@ a.btn .badge
     -webkit-order: 1;
     -ms-flex-order: 1;
             order: 1;
+}
+.intro--image img
+{
+    width: 100%;
+    max-width: 100%;
+    height: 100%; 
+
+    object-fit: cover;
+    object-position: center center;
 }
 
 .intro--sidebar--promo
@@ -646,7 +944,7 @@ a.btn .badge
     margin-bottom: 60px; 
     padding-top: 30px;
 
-    letter-spacing: -1.7px;
+    letter-spacing: .6px;
 
     color: #999;
     border-top: 4px solid #999;
@@ -688,7 +986,7 @@ a.btn .badge
     margin: 0 0 5px;
 
     text-align: center; 
-    letter-spacing: -1.7px;
+    letter-spacing: .6px;
 
     color: #c3b833;
 }
@@ -707,12 +1005,13 @@ a.btn .badge
 }
 .tahiti-wrapper .itinerary h3
 {
-    font-family: 'Fjalla+One', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 26px;
 
     margin: 0 0 30px;
 
     text-align: center; 
+    letter-spacing: 4px;
 
     color: #104465;
 }
@@ -730,11 +1029,11 @@ a.btn .badge
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: 24px;
 
     margin: 0; 
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
 
     color: #104465;
 }
@@ -742,11 +1041,11 @@ a.btn .badge
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 
     margin: 0; 
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
 }
 .tahiti-wrapper .itinerary .itinerary--details
 {
@@ -775,7 +1074,7 @@ a.btn .badge
 
     margin-right: 15px;
 
-    letter-spacing: -1.7px;
+    letter-spacing: .6px;
     text-transform: none; 
 
     color: #104465;
@@ -784,11 +1083,11 @@ a.btn .badge
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 
     display: block;
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
 
     color: #999;
 }
@@ -808,7 +1107,7 @@ a.btn .badge
     margin: 0 0 10px;
     padding-top: 35px; 
 
-    letter-spacing: -1.7px;
+    letter-spacing: .6px;
 
     color: #c3b833;
 }
@@ -854,11 +1153,11 @@ a.btn .badge
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 
     margin: 3px 0 0;
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
 
     color: #4c4c4c;
 }
@@ -1058,6 +1357,192 @@ a.btn .badge
 }
 
 /*--------------------------*/
+/* Landscape
+/*--------------------------*/
+.landscape
+{
+    position: relative;
+}
+
+.landscape--image--stars
+{
+    position: relative; 
+
+    max-width: 100%;
+}
+
+.landscape--image--hills
+{
+    position: absolute;
+    z-index: 1; 
+    bottom: 0;
+
+    max-width: 100%;
+}
+
+.landscape--jetstream
+{
+    position: absolute;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    left: 100%;
+    left: 50%;
+
+    width: 720px;
+    height: 202px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -webkit-transform: translate(150%, -200%);
+            transform: translate(-50%, -50%);
+            transform: translate(150%, -200%);
+    -webkit-animation-name: jetstream;
+            animation-name: jetstream;
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+    background: url('/assets/media/images/jet-stream.png');
+    background-size: cover;
+
+    background-blend-mode: screen;
+}
+
+@-webkit-keyframes jetstream
+{
+    0%
+    {
+        -webkit-transform: translate(150%, -200%);
+                transform: translate(150%, -200%);
+    }
+    10%
+    {
+        -webkit-transform: translate(-150%, 125%);
+                transform: translate(-150%, 125%);
+    }
+    100%
+    {
+        -webkit-transform: translate(-150%, 125%);
+                transform: translate(-150%, 125%);
+    }
+}
+
+@keyframes jetstream
+{
+    0%
+    {
+        -webkit-transform: translate(150%, -200%);
+                transform: translate(150%, -200%);
+    }
+    10%
+    {
+        -webkit-transform: translate(-150%, 125%);
+                transform: translate(-150%, 125%);
+    }
+    100%
+    {
+        -webkit-transform: translate(-150%, 125%);
+                transform: translate(-150%, 125%);
+    }
+}
+
+.landscape--jetstream2
+{
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    left: 0;
+
+    width: 450px;
+    height: 126px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -webkit-transform: translate(400%, -500%);
+            transform: translate(-50%, -50%);
+            transform: translate(400%, -500%);
+    -webkit-animation-name: jetstream2;
+            animation-name: jetstream2;
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+    background: url('/assets/media/images/jet-stream.png');
+    background-size: cover;
+
+    background-blend-mode: screen;
+}
+
+@-webkit-keyframes jetstream2
+{
+    0%
+    {
+        -webkit-transform: translate(400%, -500%);
+                transform: translate(400%, -500%);
+    }
+    10%
+    {
+        -webkit-transform: translate(-200%, 125%);
+                transform: translate(-200%, 125%);
+    }
+    100%
+    {
+        -webkit-transform: translate(-150%, 125%);
+                transform: translate(-150%, 125%);
+    }
+}
+
+@keyframes jetstream2
+{
+    0%
+    {
+        -webkit-transform: translate(400%, -500%);
+                transform: translate(400%, -500%);
+    }
+    10%
+    {
+        -webkit-transform: translate(-200%, 125%);
+                transform: translate(-200%, 125%);
+    }
+    100%
+    {
+        -webkit-transform: translate(-150%, 125%);
+                transform: translate(-150%, 125%);
+    }
+}
+
+.landscape--content
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    line-height: 24px;
+    line-height: 1.5; 
+
+    position: absolute;
+    top: 50%;
+    left: 50% !important;
+
+    width: 75%;
+
+    -webkit-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
+    text-align: center;
+    letter-spacing: 0;
+
+    color: #fff;
+}
+
+/*--------------------------*/
 /* Quote
 /*--------------------------*/
 .tahiti-wrapper .quote
@@ -1089,10 +1574,12 @@ a.btn .badge
 }
 .tahiti-wrapper .quote p
 {
-    font-family: 'Fjalla+One', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 45px;
 
     margin: 60px 0 15px; 
+
+    letter-spacing: 4px;
 
     color: #fff;
 }
@@ -1100,9 +1587,9 @@ a.btn .badge
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 
-    letter-spacing: -.15px;
+    letter-spacing: 0;
     letter-spacing: 3px;
     text-transform: uppercase;
 

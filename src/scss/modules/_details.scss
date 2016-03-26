@@ -1,0 +1,91 @@
+/*--------------------------*/
+/* Intro
+/*--------------------------*/
+
+
+.details {
+	position: relative;
+	left: 50% !important;
+	@include container();
+	@include clearfix();
+	width: span(8);
+	max-width: 1550px;
+	display: flex;
+	@include z-index(intro);
+	border: 19px solid rgba($white, 0.06);
+
+	transform: translateX(-50%) translateY(-50%);
+	
+}
+
+.details--wrapper {
+	background: linear-gradient(135deg, rgba($purple,1) 0%,rgba($red,1) 100%);
+}
+
+.intro--content {
+	position: relative;
+	width: span(6);
+	display: flex;
+	flex-direction: column;
+	order: 2;
+	color: $white;
+	
+	
+	.intro--copy {
+		@include centerer();
+		padding: 70px;
+		width: 100%;
+	}
+	h3 {
+		position: relative;
+		@include font-headline(34px);
+		margin: 0;
+		text-transform: lowercase;
+		
+		@include screen-2xl {
+			@include font-size(44px);
+		}
+	}
+	
+	p {
+		@include font-body(16px);
+		
+		@include screen-2xl {
+			@include font-size(20px);
+		}
+	}
+	
+	.intro--cta {
+		@include font-alt-headline(20px, $red);
+		text-transform: uppercase;
+	}
+}
+.intro--image {
+	width: span(6);
+	display: flex;
+	order: 1;
+	
+	img {
+		max-width: 100%;
+		@include object-fit();
+	}
+}
+
+.intro--sidebar--promo {
+	position: relative;
+	display: block;
+	padding-top: 30px;
+	@include font-headline(48px);
+	border-top: 4px solid $gray-light;
+	color: $gray-light;
+	margin-bottom: 60px;
+	
+	&:after {
+		content: " ";
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		width: 45px;
+		border-top: 1px solid $gray-light;
+	}
+}

@@ -8,6 +8,7 @@ var styles_dest	= 'public/assets/styles/'; // Destination to send your compiled 
 // Array of Javascript files to concatenate and minify
 var js_concat = [
 	'src/vendor/enquire/dist/enquire.js',
+	'src/vendor/jquery.stellar/jquery.stellar.js',
 	'src/js/scripts.js',
 ];
 
@@ -82,9 +83,9 @@ var onError = function (err) {
 //---------------------------------------------------------------------------------------------
 
 gulp.task('modernizr', function() {
-  gulp.src('src/js/modernizr-custom.js')
+  gulp.src('src/js/scripts.js')
     .pipe(modernizr({
-    
+
     // Based on default settings on http://modernizr.com/download/
     "options" : [
         "setClasses",
@@ -95,27 +96,27 @@ gulp.task('modernizr', function() {
     ],
 
     // Define any tests you want to explicitly include
-    "tests" : [	   
-		"hiddenscroll",
-		"ie8compat",
-		"ligatures",
-		"svg",
-		"backgroundblendmode",
-		"backgroundcliptext",
-		"backgroundsizecover",
-		"flexbox",
-		"flexboxlegacy",
-		"flexboxtweener",
-		"lastchild",
-		"objectfit",
-		"vhunit",
-		"vwunit"
+    "tests" : [
+        //"hiddenscroll",
+        "ie8compat",
+        "ligatures",
+        "svg",
+        "backgroundblendmode",
+        "backgroundcliptext",
+        "backgroundsizecover",
+        "flexbox",
+        "flexboxlegacy",
+        "flexboxtweener",
+        "lastchild",
+        "objectfit",
+        "vhunit",
+        "vwunit"
     ],
 
 }))
     .pipe(uglify())
     .pipe(gulp.dest(js_dest))
-    
+
 });
 
 //---------------------------------------------------------------------------------------------
@@ -231,9 +232,9 @@ gulp.task('clean', function() {
 // fonts, and compress and move images to the assets directory.
 //---------------------------------------------------------------------------------------------
 
-gulp.task('prod', function() {
+gulp.task('build', function() {
 	runSequence('clean',
-    ['styles', 'scripts', 'fonts', 'json', 'images', 'validate']);
+    ['styles', 'modernizr', 'scripts', 'fonts', 'json', 'images', 'validate']);
 });
 
 

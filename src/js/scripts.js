@@ -2,11 +2,15 @@ var main = {
 
 	initialize: function () {
         main.objectFit();
-        main.callFitVid();
-        main.modal();
-        main.heroElements();
-        main.introElements();
-        main.bookingElements();
+        main.intro();
+        main.landscape();
+        main.details();
+        //main.modal();
+        //main.heroElements();
+        //main.introElements();
+        //main.bookingElements();
+        
+        main.pageReady();
     },
 
     
@@ -35,12 +39,59 @@ var main = {
 	
 	
 	//---------------------------------------------------------------------------------------------
-    // IF FITVID EXISTS, CALL FITVID TO MAKE RESPONSIVE
+    // INTRO
     //---------------------------------------------------------------------------------------------
-    callFitVid: function() {
-        if($('.fitvid').length > 0) {
-            $('.fitvid').fitVids();
-        }
+    intro: function() {
+        
+        //get height of intro
+        
+        function introPosition() {
+			var introHeight = $('.intro').outerHeight();
+
+			$('.intro').css('margin-top', (introHeight / -2) + 'px').css('margin-bottom', (introHeight / -2) + 'px');
+			//$('.properties--column-filter').affix('checkPosition');
+		}
+		
+		introPosition();
+		
+		$(window).load(function () {
+			introPosition();
+		}).resize(function () {
+			introPosition();
+		});
+    },
+    
+    //---------------------------------------------------------------------------------------------
+    // LANDSCAPE
+    //---------------------------------------------------------------------------------------------
+    landscape: function() {
+        
+        $.stellar({
+	        hideDistantElements: false,
+        });
+    },
+    
+    //---------------------------------------------------------------------------------------------
+    // DETAILS
+    //---------------------------------------------------------------------------------------------
+    details: function() {
+        
+        //get height of intro
+        
+        function detailsPosition() {
+			var detailsHeight = $('.details').outerHeight();
+
+			$('.details').css('margin-top', (detailsHeight / -2) + 'px').css('margin-bottom', (detailsHeight / -2) + 'px');
+			//$('.properties--column-filter').affix('checkPosition');
+		}
+		
+		detailsPosition();
+		
+		$(window).load(function () {
+			detailsPosition();
+		}).resize(function () {
+			detailsPosition();
+		});
     },
     
     //---------------------------------------------------------------------------------------------
@@ -180,7 +231,17 @@ var main = {
 			bookingHeight();
 		});
 
-	}
+	},
+	
+	//---------------------------------------------------------------------------------------------
+    // PAGE READY
+    //---------------------------------------------------------------------------------------------
+    pageReady: function() {
+
+		$(window).load(function () {
+			$('body').addClass('dom-ready');
+		});
+	},
 }
 
 $(document).ready(main.initialize);

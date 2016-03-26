@@ -6,10 +6,14 @@
 .hero {
 	@include container();
 	position: relative;
+	font-size: 0;
+	@include z-index(hero);
 }
 	
 .hero--img {
+	position: relative;
 	@include object-fit();
+	@include z-index(hero--img);
 }
 
 .hero--logo {
@@ -21,10 +25,40 @@
 
 .hero--content {
 	@include centerer();
+	left: 50% !important;
 	color: $white;
+	@include z-index(hero--content);
 }
 
 .hero--h1 {
 	@include font-headline(90px);
 	text-align: center;
+	letter-spacing: -1.7px;
+}
+.hero--h2 {
+	@include font-body(20px);
+	text-align: center;
+	font-weight: 100;
+}
+
+.hero--stars--1 {
+	background: url('/assets/media/images/mars-hero-stars-1.png');
+	background-repeat: repeat;
+	position: absolute;
+	top:0;
+	right:0;
+	bottom: 0;
+	left: 0;
+	@include z-index(hero--stars);
+}
+.hero--stars--2 {
+	background: url('/assets/media/images/mars-hero-stars-1.png');
+	transform: rotate(90deg);
+	background-repeat: repeat;
+	position: absolute;
+	top:0;
+	right:0;
+	bottom: 0;
+	left: 0;
+	@include z-index(hero--stars);
 }

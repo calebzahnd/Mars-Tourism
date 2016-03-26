@@ -18,25 +18,35 @@
 
 $font-family-sans-serif:	'Open Sans', sans-serif;
 $font-family-headline:		'Regular-Bold', sans-serif;
-$font-family-alt-headline:	'Fjalla+One', sans-serif;
+$font-family-alt-headline:	'Fjalla One', sans-serif;
 
-@mixin font-body($font-size: inherit) {
+@mixin font-body($font-size: inherit, $color: inherit) {
 	font-family: $font-family-sans-serif;
 	font-size: $font-size;
-	line-height: 26px;
-	letter-spacing: -0.15px;
+	line-height: 24px;
+	letter-spacing: 0px;
+	@if ($color != inherit) {
+	color: $color;
+	}
 }
 
-@mixin font-headline($font-size: inherit) {
+@mixin font-headline($font-size: inherit, $color: inherit) {
 	font-family: $font-family-headline;
 	font-size: $font-size;
-	letter-spacing: -1.7px;
+	letter-spacing: 0.6px;
     line-height: 1;
+	@if ($color != inherit) {
+	color: $color;
+	}
 }
 
-@mixin font-alt-headline($font-size: inherit) {
+@mixin font-alt-headline($font-size: inherit, $color: inherit) {
 	font-family: $font-family-alt-headline;
 	font-size: $font-size;
+	letter-spacing: 4px;
+	@if ($color != inherit) {
+	color: $color;
+	}
 }
 
 

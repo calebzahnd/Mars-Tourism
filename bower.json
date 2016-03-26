@@ -1,15 +1,16 @@
 {
   "name": "Windstar Cruises",
   "version": "0.1.0",
-  "homepage": "https://bitbucket.org/mmgyglobal/windstar",
+  "homepage": "https://bitbucket.org/mmgyglobal/marstourism",
   "private": true,
   "authors": [
     "Caleb Zahnd"
   ],
-  "description": "Front End framework for Windstar Cruises Landing Pages",
+  "description": "Front End framework for Mars Tourism Landing Page",
   "dependencies": {
     "jquery": "~1.11.2",
     "enquire": "~2.1.2",
-    "susy": "~2.2.10"
+    "susy": "~2.2.10",
+    "jquery.stellar": "stellar#^0.6.2"
   }
 }

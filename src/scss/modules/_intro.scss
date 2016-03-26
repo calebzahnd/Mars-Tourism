@@ -4,29 +4,62 @@
 
 
 .intro {
+	position: fixed;
+	left: 50% !important;
 	@include container();
 	@include clearfix();
-	width: 60%;
-	max-width: 939px;
+	width: span(8);
+	max-width: 1550px;
 	display: flex;
+	@include z-index(intro);
 	border: 19px solid rgba($white, 0.06);
+	opacity: 0;
+	transform: translateX(-50%) translateY(15%);
+	
+	.dom-ready & {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+		//transition: all ease-in-out 0.4s;
+	}
 }
+
 	
 .intro--content {
+	position: relative;
 	width: span(6);
 	display: flex;
 	flex-direction: column;
 	order: 2;
 	color: $white;
 	background: linear-gradient(135deg, rgba($purple,1) 0%,rgba($red,1) 100%);
+	
+	.intro--copy {
+		@include centerer();
+		padding: 70px;
+		width: 100%;
+	}
 	h3 {
 		position: relative;
 		@include font-headline(34px);
-		margin: 0 0 35px;
+		margin: 0;
+		text-transform: lowercase;
+		
+		@include screen-2xl {
+			@include font-size(44px);
+		}
 	}
 	
 	p {
 		@include font-body(16px);
+		
+		@include screen-2xl {
+			@include font-size(20px);
+		}
+	}
+	
+	.intro--cta {
+		@include font-alt-headline(20px, $red);
+		text-transform: uppercase;
 	}
 }
 .intro--image {
@@ -34,6 +67,10 @@
 	display: flex;
 	order: 1;
 	
+	img {
+		max-width: 100%;
+		@include object-fit();
+	}
 }
 
 .intro--sidebar--promo {

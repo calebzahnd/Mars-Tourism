@@ -1,0 +1,89 @@
+/*--------------------------*/
+/* Landscape
+/*--------------------------*/
+
+.landscape {
+	position: relative;
+}
+
+.landscape--image--stars {
+	max-width: 100%;
+	position: relative;
+}
+.landscape--image--hills {
+	max-width: 100%;
+	position: absolute;
+	bottom: 0;
+	@include z-index(ground);
+}
+
+.landscape--jetstream {
+	position: absolute;
+	top: 0;
+	left:100%;
+	@include centerer();
+	transform: translate(150%, -200%);
+	background: url('/assets/media/images/jet-stream.png');
+	background-size: cover;
+	width: 720px;
+	height: 202px;
+	animation-name: jetstream;
+    animation-duration: 15s;
+    animation-delay: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	background-blend-mode: screen;
+}
+
+@keyframes jetstream {
+	0% {
+		transform: translate(150%, -200%);
+	}
+	10% {
+		transform: translate(-150%, 125%);
+	}
+	100% {
+		transform: translate(-150%, 125%);
+	}
+}
+
+.landscape--jetstream2 {
+	position: absolute;
+	@include centerer();
+	left: 0%;
+	transform: translate(400%, -500%);
+	background: url('/assets/media/images/jet-stream.png');
+	background-size: cover;
+	width: 450px;
+	height: 126px;
+	animation-name: jetstream2;
+    animation-duration: 15s;
+    animation-delay: 4s; //8s
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	background-blend-mode: screen;
+}
+
+@keyframes jetstream2 {
+	0% {
+		transform: translate(400%, -500%);
+	}
+	10% {
+		transform: translate(-200%, 125%);
+	}
+	100% {
+		transform: translate(-150%, 125%);
+	}
+}
+
+
+.landscape--content {
+    position: absolute;
+    top:50%;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    @include font-body(26px, $white);
+    width: 75%;
+    text-align: center;
+    line-height: 1.5;
+}
