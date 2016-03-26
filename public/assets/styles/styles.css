@@ -31,6 +31,73 @@
     clear: both;
 }
 
+/*--------------------------*/
+/* Breakpoints
+/*--------------------------*/
+@media only screen and (min-width: 0)
+{
+    .cz
+    {
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width: 544px)
+{
+    .cz
+    {
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width: 768px)
+{
+    .cz
+    {
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width: 992px)
+{
+    .cz
+    {
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width: 1200px)
+{
+    .cz
+    {
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width: 1440px)
+{
+    .cz
+    {
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width: 2000px)
+{
+    .cz
+    {
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width: 2650px)
+{
+    .cz
+    {
+        height: 1px;
+    }
+}
+
 /*******/
 /* HTML
 /*******/
@@ -57,9 +124,35 @@ body
 .container,
 .container-fluid
 {
-    position: relative;
+    position: relative; 
 
-    max-width: 1400px;
+    max-width: 2650px;
+    margin-right: auto;
+    margin-left: auto;
+
+    *zoom: 1;
+}
+.container:after,
+.container-fluid:after
+{
+    display: block;
+    clear: both; 
+
+    content: ' ';
+}
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after
+{
+    display: table; 
+
+    content: ' ';
+}
+.container:after,
+.container-fluid:after
+{
+    clear: both;
 }
 
 /*--------------*/
@@ -341,8 +434,10 @@ a.btn .badge
 /*--------------------------*/
 .hero
 {
-    max-width: 1440px;
-    margin-right: auto; 
+    position: relative; 
+
+    max-width: 2650px;
+    margin-right: auto;
     margin-left: auto;
 }
 .hero:after
@@ -451,189 +546,94 @@ a.btn .badge
 /*--------------------------*/
 /* Intro
 /*--------------------------*/
-.tahiti-wrapper .intro
+.intro
 {
-    position: absolute;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
 
-    max-width: 992px;
-    padding: 30px 0 15px;
+    width: 60%;
+    max-width: 2650px;
+    max-width: 939px;
+    margin-right: auto;
+    margin-left: auto;
 
-    background: white;
-    background-image: url('/assets/media/images/map-bkgd.png');
-    background-size: cover; 
+    border: 19px solid rgba(255, 255, 255, .06); 
 
     *zoom: 1;
 }
-.tahiti-wrapper .intro:before,
-.tahiti-wrapper .intro:after
+.intro:after
+{
+    display: block;
+    clear: both; 
+
+    content: ' ';
+}
+.intro:before,
+.intro:after
 {
     display: table; 
 
     content: ' ';
 }
-.tahiti-wrapper .intro:after
+.intro:after
 {
     clear: both;
 }
-@media only screen and (min-width: 544px)
-{
-    .tahiti-wrapper .intro
-    {
-        padding: 60px 0;
-    }
-}
-@media only screen and (min-width: 992px)
-{
-    .tahiti-wrapper .intro
-    {
-        position: relative;
 
-        width: 992px;
-    }
-}
-
-.tahiti-wrapper .intro--content
+.intro--content
 {
-    float: left;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
 
-    width: 100%;
-    padding-right: 2.08333%;
-    padding-right: 30px; 
-    padding-left: 2.08333%;
-    padding-left: 30px;
-}
-@media only screen and (min-width: 768px)
-{
-    .tahiti-wrapper .intro--content
-    {
-        float: left;
+    width: 50%;
 
-        width: 70.83333%;
-        padding-right: 2.08333%;
-        padding-right: 45px; 
-        padding-left: 2.08333%;
-        padding-left: 45px;
-    }
+    color: #fff;
+    background: linear-gradient(135deg, #362336 0%, #ea4a36 100%); 
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+            order: 2;
 }
-.tahiti-wrapper .intro--content h1
+.intro--content h3
 {
     font-family: 'Regular-Bold', sans-serif;
-    font-size: 58px;
+    font-size: 34px;
     line-height: 1;
 
     position: relative;
 
-    margin: 0 0 35px;
+    margin: 0 0 35px; 
 
-    text-align: center; 
     letter-spacing: -1.7px;
-
-    color: #c3b833;
 }
-@media only screen and (min-width: 768px)
-{
-    .tahiti-wrapper .intro--content h1
-    {
-        font-size: 55px;
-
-        text-align: left;
-    }
-}
-@media only screen and (min-width: 992px)
-{
-    .tahiti-wrapper .intro--content h1
-    {
-        font-size: 72px;
-    }
-}
-.tahiti-wrapper .intro--content h1 span
-{
-    font-family: 'Fjalla+One', sans-serif;
-    font-size: 51px;
-
-    display: block;
-
-    margin-top: 30px; 
-
-    text-transform: none;
-
-    color: #104465;
-}
-@media only screen and (min-width: 768px)
-{
-    .tahiti-wrapper .intro--content h1 span
-    {
-        font-size: 40px; 
-
-        position: absolute;
-        top: 5px;
-
-        display: inline;
-
-        margin-top: 0;
-        margin-left: 15px;
-    }
-}
-@media only screen and (min-width: 992px)
-{
-    .tahiti-wrapper .intro--content h1 span
-    {
-        font-size: 51px;
-    }
-}
-.tahiti-wrapper .intro--content p
+.intro--content p
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
 
     letter-spacing: -.15px;
-
-    color: #4c4c4c;
 }
-.tahiti-wrapper .intro--content p.intro--content--disclaimer
+
+.intro--image
 {
-    font-weight: 700;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
 
-    color: #999;
+    width: 50%;
+
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+            order: 1;
 }
 
-.tahiti-wrapper .intro--sidebar
-{
-    float: left;
-
-    width: 100%;
-    padding-right: 2.08333%; 
-    padding-left: 2.08333%;
-}
-@media only screen and (max-width: 767px)
-{
-    .tahiti-wrapper .intro--sidebar
-    {
-        padding-right: 30px; 
-        padding-left: 30px;
-    }
-}
-@media only screen and (min-width: 768px)
-{
-    .tahiti-wrapper .intro--sidebar
-    {
-        float: left;
-
-        width: 29.16667%;
-        padding-right: 2.08333%;
-        padding-right: 45px; 
-        padding-left: 2.08333%;
-    }
-}
-.tahiti-wrapper .intro--sidebar .btn
-{
-    display: block; 
-
-    text-align: center;
-}
-
-.tahiti-wrapper .intro--sidebar--promo
+.intro--sidebar--promo
 {
     font-family: 'Regular-Bold', sans-serif;
     font-size: 48px;
@@ -651,7 +651,7 @@ a.btn .badge
     color: #999;
     border-top: 4px solid #999;
 }
-.tahiti-wrapper .intro--sidebar--promo:after
+.intro--sidebar--promo:after
 {
     position: absolute;
     bottom: -30px;

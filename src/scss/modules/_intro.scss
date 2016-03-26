@@ -2,123 +2,55 @@
 /* Intro
 /*--------------------------*/
 
-.tahiti-wrapper {
+
+.intro {
+	@include container();
+	@include clearfix();
+	width: 60%;
+	max-width: 939px;
+	display: flex;
+	border: 19px solid rgba($white, 0.06);
+}
 	
-	.intro {		
-		@include clearfix();
-		position: absolute;
-		
-		background: white;
-		padding: 30px 0 15px;
-		max-width: map-get($grid-breakpoints, lg);
-		background-image: url('/assets/media/images/map-bkgd.png');
-		background-size: cover;
-		
-		@include screen-sm {
-			padding: 60px 0;
-		}
-		@include screen-lg {
-			position: relative;
-			width: map-get($grid-breakpoints, lg);
-		}
-		
-	}
-		
-	.intro--content {
-		@include span(12);
-		padding-left: 30px;
-		padding-right: 30px;
-		
-		@include screen-md {
-			@include span(8.5);
-			padding-left: 45px;
-			padding-right: 45px;
-		}
-		
-		h1 {
-			position: relative;
-			@include font-headline(58px);
-			margin: 0 0 35px;
-			color: $yellow;
-			text-align: center;
-			
-			@include screen-md {
-				font-size: 55px;
-				text-align: left;
-			}
-			
-			@include screen-lg {
-				font-size: 72px;
-			}
-			
-			span {
-				display: block;
-				color: $blue-dark;
-				@include font-alt-headline(51px);
-				text-transform: none;
-				margin-top: 30px;
-				
-				@include screen-md {
-					position: absolute;
-					display: inline;
-					top: 5px;
-					margin-top: 0;
-					margin-left: 15px;
-					font-size: 40px;	
-				}
-				
-				@include screen-lg {
-					font-size: 51px;
-				}
-			}
-		}
-		
-		p {
-			@include font-body(16px);
-			color: $gray-dark;
-		}
-		
-		p.intro--content--disclaimer {
-			font-weight: 700;
-			color: $gray-light;
-		}
-	}
-	.intro--sidebar {
-		@include span(12);
-		
-		@include screen-sm-max {
-			padding-left: 30px;
-			padding-right: 30px;
-		}
-		
-		@include screen-md {
-			@include span(3.5);
-			padding-right: 45px;
-		}
-		
-		.btn {
-			text-align: center;
-			display: block;
-			
-		}
-	}
-	
-	.intro--sidebar--promo {
+.intro--content {
+	width: span(6);
+	display: flex;
+	flex-direction: column;
+	order: 2;
+	color: $white;
+	background: linear-gradient(135deg, rgba($purple,1) 0%,rgba($red,1) 100%);
+	h3 {
 		position: relative;
-		display: block;
-		padding-top: 30px;
-		@include font-headline(48px);
-		border-top: 4px solid $gray-light;
-		color: $gray-light;
-		margin-bottom: 60px;
-		
-		&:after {
-			content: " ";
-			position: absolute;
-			bottom: -30px;
-			left: 0;
-			width: 45px;
-			border-top: 1px solid $gray-light;
-		}
+		@include font-headline(34px);
+		margin: 0 0 35px;
+	}
+	
+	p {
+		@include font-body(16px);
+	}
+}
+.intro--image {
+	width: span(6);
+	display: flex;
+	order: 1;
+	
+}
+
+.intro--sidebar--promo {
+	position: relative;
+	display: block;
+	padding-top: 30px;
+	@include font-headline(48px);
+	border-top: 4px solid $gray-light;
+	color: $gray-light;
+	margin-bottom: 60px;
+	
+	&:after {
+		content: " ";
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		width: 45px;
+		border-top: 1px solid $gray-light;
 	}
 }

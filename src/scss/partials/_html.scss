@@ -17,7 +17,8 @@ body {
 }
 
 .container, .container-fluid {
+	@include container(12);
+	@include clearfix();
 	position: relative;
-	max-width: 1400px;
 }
 

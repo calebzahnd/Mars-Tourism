@@ -6,7 +6,7 @@
 $susy: (
 	columns: 12,
 	gutters: 1,
-	container: 1440px,
+	container: 2650px,
 	gutter-position: inside,
 	global-box-sizing: border-box
 );
@@ -27,6 +27,20 @@ $gray-dark:		#4c4c4c;
 $gray:			#b3b3b3;
 $gray-light:	#999999;
 
+
+
+//The Grid
+$grid-breakpoints: (
+	xs: 0,
+	sm: 544px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	2xl: 1440px,
+	3xl: 2000px,
+	4xl: 2650px
+);
+
 //Z-Index Management -- utilizes Sass Maps
 //Easiest way to use is via the mixin: @include z-index(zero);
 $z-index: (
@@ -37,3 +51,5 @@ $z-index: (
 	underground				:	-1,
 	hell					:	-9000
 );
+
+

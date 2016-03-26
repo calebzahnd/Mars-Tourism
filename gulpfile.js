@@ -262,5 +262,10 @@ gulp.task('default', function() {
 	    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
 	    gulp.start('validate');
 	});
+	// Watch image files
+	gulp.watch('src/media/images/**/*.*', function(event) {
+	    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
+	    gulp.start('images');
+	});
 
 });

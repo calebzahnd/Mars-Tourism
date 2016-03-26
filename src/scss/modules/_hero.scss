@@ -5,6 +5,7 @@
 
 .hero {
 	@include container();
+	position: relative;
 }
 	
 .hero--img {
