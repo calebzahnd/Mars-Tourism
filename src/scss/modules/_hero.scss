@@ -31,13 +31,30 @@
 	left: 50% !important;
 	color: $white;
 	@include z-index(hero--content);
+	width: 90%;
+	
+	@include screen-sm {
+		width: 60%;
+	}
+	@include screen-lg {
+		width: 75%;
+	}
+	@include screen-xl {
+		width: 50%;
+	}
+	
 }
 
 .hero--h1 {
-	@include font-headline(90px);
+	@include font-headline(48px);
 	margin: 0 0 20px;
 	text-align: center;
 	letter-spacing: -1.7px;
+	text-transform: uppercase;
+	
+	@include screen-lg {
+		@include font-size(75px);
+	}
 }
 .hero--h2 {
 	position: relative;

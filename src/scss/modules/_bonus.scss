@@ -4,8 +4,10 @@
 
 
 .bonus {
+	position: relative;
 	display: flex;
 	height: 180px;
+	@include z-index(bonus);
 }
 
 .bonus--image {
@@ -33,9 +35,13 @@
 	}
 	
 	h3 {
-		@include font-headline(38px, $white);
-		text-transform: lowercase;
+		@include font-headline(46px, $white);
+		text-transform: uppercase;
 		margin: 0 0 15px;
+		
+		@include screen-md {
+			@include font-size(40px);
+		}
 	}
 }
 

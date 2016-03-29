@@ -40,6 +40,7 @@
 	width: 50%;
 	text-align: right;
 	padding: 60px;
+	max-height: 175px;
 	
 	h4 {
 		&::before {
@@ -60,6 +61,7 @@
 	position: relative;
 	width: 50%;
 	padding: 60px;
+	max-height: 175px;
 	
 	&::before {
 		content: '';

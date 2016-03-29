@@ -12,6 +12,16 @@ div.details {
 	@include z-index(intro);
 	border: 19px solid rgba($white, 0.06);
 	transform: translate(-50%, -50%);
+	
+	@include screen-sm {
+		width: 80%;
+	}
+	@include screen-lg {
+		width: 90%;
+	}
+	@include screen-2xl {
+		width: span(8);
+	}
 }
 
 .details--wrapper {
@@ -23,8 +33,8 @@ div.details {
 .details--headline {
 	position: relative;
 	@include span(12);
-	@include font-headline(38px, $white);
-	text-transform: lowercase;
+	@include font-headline(40px, $white);
+	text-transform: uppercase;
 	margin: 0 0 20px;
 }
 

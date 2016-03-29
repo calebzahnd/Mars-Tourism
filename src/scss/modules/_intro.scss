@@ -9,7 +9,7 @@
 	top:-50%;
 	//@include container();
 	@include clearfix();
-	width: span(8);
+	width: 100%;
 	max-width: 1550px;
 	display: flex;
 	@include z-index(intro);
@@ -17,11 +17,12 @@
 	opacity: 0;
 	transform: translateX(-50%) translateY(15%);
 	
-	@include screen-sm {
-		width: 80%;
+
+	@include screen-lg {
+		width: 90%;
 	}
-	@include screen-xl {
-		width: span(8);
+	@include screen-2xl {
+		width: 66.66667%;
 	}
 	
 	.dom-ready & {
@@ -48,12 +49,13 @@
 	}
 	h3 {
 		position: relative;
-		@include font-headline(34px);
+		display: inline-block;
+		@include font-headline(28px);
 		margin: 0;
-		text-transform: lowercase;
+		text-transform: uppercase;
 		
 		@include screen-2xl {
-			@include font-size(44px);
+			@include font-size(34px);
 		}
 		
 		&::before {
