@@ -4,7 +4,7 @@
 
 
 .hero {
-	@include container();
+	//@include container();
 	position: relative;
 	font-size: 0;
 	@include z-index(hero);
@@ -21,10 +21,13 @@
 	left: 53px;
 	top: 46px;
 	width: 163px;
+	@include z-index(hero--logo);
 }
 
 .hero--content {
-	@include centerer();
+	position: absolute;
+	top:50%;
+	transform: translate(-50%, -50%);
 	left: 50% !important;
 	color: $white;
 	@include z-index(hero--content);
@@ -61,4 +64,15 @@
 	bottom: 0;
 	left: 0;
 	@include z-index(hero--stars);
+}
+
+.hamburger {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	@include z-index(hamburger);
+	
+	&:focus {
+		outline: none;
+	}
 }

@@ -1,0 +1,63 @@
+/*--------------------------*/
+/* Trips
+/*--------------------------*/
+
+.trips {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	bottom: -193px;
+	
+	h4 {
+		@include font-body(70px, $white);
+		font-weight: 100;
+		letter-spacing: -0.05em;
+		margin: 0;
+	}
+	
+	.trips--cta {
+		position: relative;
+		display: inline-block;
+		@include font-alt-headline(16px, #b4a8aa);
+		@include font-alt-headline-link();
+		margin-top: 30px;
+		
+		&::before {
+			@include iconfont($icon-arrow-left, 12px);
+			position: absolute;
+			top:4px;
+		}
+	}
+}
+
+.trips--7 {
+	position: relative;
+	width: 50%;
+	text-align: right;
+	padding: 60px;
+	
+	.trips--cta::before {
+		left: -20px;
+	}
+	
+}
+.trips--11 {
+	position: relative;
+	width: 50%;
+	padding: 60px;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		border-left: 1px solid #a5a4a4;
+		width: 1px;
+		height: 180px;
+		left:0;
+		top: -47px;
+	}
+	
+	.trips--cta::before {
+		right: -20px;
+		transform: rotate(180deg);
+	}
+}

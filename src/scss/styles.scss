@@ -8,19 +8,20 @@
 @import 'partials/variables';
 @import 'base/mixins';
 @import 'base/breakpoints';
+@import '../vendor/css-hamburgers/_sass/hamburgers/hamburgers.scss';
 
 // Partials
 @import 'partials/html';
 @import 'partials/typography';
+@import 'partials/iconfont';
 @import 'partials/buttons';
 
 // Modules
-@import 'modules/booking';
+@import 'modules/bonus';
 @import 'modules/details';
-@import 'modules/feature';
 @import 'modules/hero';
 @import 'modules/intro';
-@import 'modules/itinerary';
 @import 'modules/landscape';
-@import 'modules/quote';
+@import 'modules/surface';
+@import 'modules/trips';
 

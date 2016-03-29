@@ -4,9 +4,10 @@
 
 
 .intro {
-	position: fixed;
+	position: absolute;
 	left: 50% !important;
-	@include container();
+	top:-50%;
+	//@include container();
 	@include clearfix();
 	width: span(8);
 	max-width: 1550px;
@@ -18,8 +19,8 @@
 	
 	.dom-ready & {
 		opacity: 1;
-		transform: translateX(-50%) translateY(0);
-		//transition: all ease-in-out 0.4s;
+		transform: translateX(-50%) translateY(-50%);
+		transition: all linear 0.4s;
 	}
 }
 
@@ -31,7 +32,7 @@
 	flex-direction: column;
 	order: 2;
 	color: $white;
-	background: linear-gradient(135deg, rgba($purple,1) 0%,rgba($red,1) 100%);
+	background: linear-gradient(135deg, rgba($purple,1) 0%,rgba($red-dark,1) 100%);
 	
 	.intro--copy {
 		@include centerer();
@@ -47,6 +48,13 @@
 		@include screen-2xl {
 			@include font-size(44px);
 		}
+		
+		&::before {
+			@include iconfont($icon-jupiter, 65px);
+			display: block;
+			text-align: center;
+			margin-bottom: 20px;
+		}
 	}
 	
 	p {
@@ -59,17 +67,24 @@
 	
 	.intro--cta {
 		@include font-alt-headline(20px, $red);
-		text-transform: uppercase;
+		@include font-alt-headline-link();
 	}
 }
 .intro--image {
 	width: span(6);
 	display: flex;
 	order: 1;
+	overflow: hidden;
 	
 	img {
 		max-width: 100%;
 		@include object-fit();
+		transition: all ease-in-out 2.5s;
+		
+		&:hover {
+			backface-visibility: hidden;
+			transform: translateZ(0) scale(1.1);
+		}
 	}
 }
 

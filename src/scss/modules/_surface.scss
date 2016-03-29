@@ -1,0 +1,12 @@
+/*--------------------------*/
+/* Surface
+/*--------------------------*/
+
+.surface {
+	position: relative;
+	font-size: 0;
+}
+
+.surface--image {
+	@include object-fit();
+}

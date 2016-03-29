@@ -1,91 +1,79 @@
 /*--------------------------*/
-/* Intro
+/* Details
 /*--------------------------*/
 
 
 div.details {
-	position: relative;
+	position: absolute;
 	left: 50% !important;
-	@include container();
-	@include clearfix();
+	top: -50%;
 	width: span(8);
 	max-width: 1550px;
-	display: flex;
 	@include z-index(intro);
 	border: 19px solid rgba($white, 0.06);
-
-	transform: translateX(-50%) translateY(-50%);
-	
+	transform: translate(-50%, -50%);
 }
 
 .details--wrapper {
-	background: linear-gradient(135deg, rgba($purple,1) 0%,rgba($red,1) 100%);
+	@include clearfix();
+	background: linear-gradient(135deg, rgba($red-dark,1) 0%,rgba($purple,1) 100%);
+	padding: 90px 60px;
 }
 
-.intro--content {
+.details--headline {
 	position: relative;
-	width: span(6);
-	display: flex;
-	flex-direction: column;
-	order: 2;
+	@include span(12);
+	@include font-headline(38px, $white);
+	text-transform: lowercase;
+	margin: 0 0 20px;
+}
+
+.details--copy {
+	position: relative;
+	@include span(6);
 	color: $white;
 	
-	
-	.intro--copy {
-		@include centerer();
-		padding: 70px;
-		width: 100%;
-	}
-	h3 {
-		position: relative;
-		@include font-headline(34px);
-		margin: 0;
-		text-transform: lowercase;
 		
-		@include screen-2xl {
-			@include font-size(44px);
-		}
-	}
-	
 	p {
-		@include font-body(16px);
+		@include font-body(16px, #dfdfdf);
 		
 		@include screen-2xl {
 			@include font-size(20px);
 		}
-	}
-	
-	.intro--cta {
-		@include font-alt-headline(20px, $red);
-		text-transform: uppercase;
+		
+		strong {
+			color: $white;
+		}
 	}
 }
-.intro--image {
-	width: span(6);
-	display: flex;
-	order: 1;
+.details--bullets {
+	@include span(6);
 	
-	img {
-		max-width: 100%;
-		@include object-fit();
+	ul {
+		@include font-body(14px, rgba($white, 0.5));
 	}
 }
 
-.intro--sidebar--promo {
-	position: relative;
-	display: block;
-	padding-top: 30px;
-	@include font-headline(48px);
-	border-top: 4px solid $gray-light;
-	color: $gray-light;
-	margin-bottom: 60px;
-	
-	&:after {
-		content: " ";
-		position: absolute;
-		bottom: -30px;
-		left: 0;
-		width: 45px;
-		border-top: 1px solid $gray-light;
-	}
+
+.details--expert {
+	display: flex;
+}
+
+.details--expert--image {
+	display: flex;
+	margin-right: 20px;
+}
+
+.details--expert--content {
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+}
+
+.details--expert--title {
+	@include font-body(16px, $white);
+}
+.details--expert--cta {
+	@include font-alt-headline(20px, $red);
+	@include font-alt-headline-link();
 }

@@ -3,22 +3,35 @@
 /*--------------*/
 
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Fjalla+One');
 
 @font-face {
-  font-family: 'Regular-Bold';
-  src:  url('/assets/media/fonts/regular-bold/Regular-Bold.eot?#iefix') format('embedded-opentype'),
+	font-family: 'Regular-Bold';
+	src:  url('/assets/media/fonts/regular-bold/Regular-Bold.eot?#iefix') format('embedded-opentype'),
 		url('/assets/media/fonts/regular-bold/Regular-Bold.otf')  format('opentype'),
 		url('/assets/media/fonts/regular-bold/Regular-Bold.woff') format('woff'),
 		url('/assets/media/fonts/regular-bold/Regular-Bold.ttf')  format('truetype'),
 		url('/assets/media/fonts/regular-bold/Regular-Bold.svg#Regular-Bold') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'iconfont-mars';
+	src:  url('/assets/media/fonts/iconfont-mars/iconfont-mars.eot?#iefix') format('embedded-opentype'),
+		url('/assets/media/fonts/iconfont-mars/iconfont-mars.woff2') format('woff2'),
+		url('/assets/media/fonts/iconfont-mars/iconfont-mars.otf')  format('opentype'),
+		url('/assets/media/fonts/iconfont-mars/iconfont-mars.ttf')  format('truetype'),
+		url('/assets/media/fonts/iconfont-mars/iconfont-mars.woff') format('woff'),
+		url('/assets/media/fonts/iconfont-mars/iconfont-mars.svg#Regular-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 $font-family-sans-serif:	'Open Sans', sans-serif;
 $font-family-headline:		'Regular-Bold', sans-serif;
 $font-family-alt-headline:	'Fjalla One', sans-serif;
+$font-iconfont:				'iconfont-mars';
 
 @mixin font-body($font-size: inherit, $color: inherit) {
 	font-family: $font-family-sans-serif;
@@ -44,8 +57,20 @@ $font-family-alt-headline:	'Fjalla One', sans-serif;
 	font-family: $font-family-alt-headline;
 	font-size: $font-size;
 	letter-spacing: 4px;
+	text-transform: uppercase;
 	@if ($color != inherit) {
 	color: $color;
+	}
+}
+
+@mixin font-alt-headline-link() {
+	transition: all ease-in-out 0.15s;
+	
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken($white, 10);
+		transition: all ease-in-out 0.15s;
 	}
 }
 

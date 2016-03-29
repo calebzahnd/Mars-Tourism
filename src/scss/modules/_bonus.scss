@@ -1,0 +1,44 @@
+/*--------------------------*/
+/* Bonus
+/*--------------------------*/
+
+
+.bonus {
+	display: flex;
+	height: 180px;
+}
+
+.bonus--image {
+	width: 50%;
+	height: 180px;
+	
+	img {
+		max-width: 100%;
+		@include object-fit();
+	}
+}
+
+.bonus--content {
+	position: relative;
+	width: 50%;
+	height: 180px;
+	background: linear-gradient(135deg, rgba($purple,1) 0%,rgba($red-dark,1) 100%);
+	
+	.bonus--content--copy {
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		padding: 0 50px;
+	}
+	
+	h3 {
+		@include font-headline(38px, $white);
+		text-transform: lowercase;
+		margin: 0 0 15px;
+	}
+}
+
+.bonus--cta {
+	@include font-alt-headline(20px, $red);
+	@include font-alt-headline-link();
+}

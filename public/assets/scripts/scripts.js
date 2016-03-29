@@ -958,14 +958,15 @@ var main = {
 
 	initialize: function () {
         //main.objectFit();
-        main.intro();
-        main.landscape();
-        main.details();
+        main.stellar();
+        main.menu();
+        //main.intro();
+        //main.details();
         //main.modal();
         //main.heroElements();
         //main.introElements();
         //main.bookingElements();
-        
+        main.hal();
         main.pageReady();
     },
 
@@ -991,6 +992,27 @@ var main = {
 				});
 			});
 		}
+	},
+    
+    //---------------------------------------------------------------------------------------------
+    // STELLAR
+    //---------------------------------------------------------------------------------------------
+    stellar: function() {
+        
+        $.stellar({
+	        hideDistantElements: false,
+	        horizontalScrolling: false,
+        });
+    },
+    
+    //---------------------------------------------------------------------------------------------
+    // MENU
+    //---------------------------------------------------------------------------------------------
+    menu: function() {
+
+		$('.hamburger').click(function(){
+			$(this).toggleClass('is-active');
+		});
 	},
 	
 	
@@ -1018,16 +1040,6 @@ var main = {
     },
     
     //---------------------------------------------------------------------------------------------
-    // LANDSCAPE
-    //---------------------------------------------------------------------------------------------
-    landscape: function() {
-        
-        $.stellar({
-	        hideDistantElements: false,
-        });
-    },
-    
-    //---------------------------------------------------------------------------------------------
     // DETAILS
     //---------------------------------------------------------------------------------------------
     details: function() {
@@ -1035,9 +1047,9 @@ var main = {
         //get height of intro
         
         function detailsPosition() {
-			var detailsHeight = $('.details').outerHeight();
+			var detailsHeight = $('.details').innerHeight();
 
-			$('div.details').css('margin-top', (detailsHeight / -2) + 'px').css('margin-bottom', (detailsHeight / -2) + 'px');
+			//$('div.details').css('margin-top', (detailsHeight / -2) + 'px').css('margin-bottom', (detailsHeight / -2) + 'px');
 			//$('.properties--column-filter').affix('checkPosition');
 		}
 		
@@ -1190,6 +1202,25 @@ var main = {
 	},
 	
 	//---------------------------------------------------------------------------------------------
+    // I'M SORRY, DAVE. BUT I CAN'T DO THAT
+    //---------------------------------------------------------------------------------------------
+    hal: function() {
+
+		var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', '/assets/media/audio/hal.mp3');
+        $.get();
+
+
+
+
+        $('.details--expert--image').click(function() {
+	        audioElement.play();
+        });
+
+
+	},
+	
+	//---------------------------------------------------------------------------------------------
     // PAGE READY
     //---------------------------------------------------------------------------------------------
     pageReady: function() {
@@ -1197,7 +1228,7 @@ var main = {
 		$(window).load(function () {
 			$('body').addClass('dom-ready');
 		});
-	},
+	}
 }
 
 $(document).ready(main.initialize);

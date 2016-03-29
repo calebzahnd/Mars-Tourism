@@ -4,6 +4,7 @@
 
 .landscape {
 	position: relative;
+	max-width: 100vw;
 }
 
 .landscape--image--stars {
@@ -15,6 +16,15 @@
 	position: absolute;
 	bottom: 0;
 	@include z-index(ground);
+}
+
+.landscape--wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
 }
 
 .landscape--jetstream {
@@ -33,17 +43,24 @@
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	background-blend-mode: screen;
+	opacity: 0;
 }
 
 @keyframes jetstream {
 	0% {
 		transform: translate(150%, -200%);
+		opacity: 0;
 	}
 	10% {
 		transform: translate(-150%, 125%);
+		opacity: 1;
+	}
+	11% {
+		opacity: 0;
 	}
 	100% {
 		transform: translate(-150%, 125%);
+		opacity: 0;
 	}
 }
 
@@ -62,17 +79,24 @@
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	background-blend-mode: screen;
+	opacity: 0;
 }
 
 @keyframes jetstream2 {
 	0% {
 		transform: translate(400%, -500%);
+		opacity: 1;
 	}
 	10% {
 		transform: translate(-200%, 125%);
+		opacity: 1;
+	}
+	11% {
+		opacity: 0;
 	}
 	100% {
 		transform: translate(-150%, 125%);
+		opacity: 0;
 	}
 }
 

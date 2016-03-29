@@ -30,6 +30,12 @@ var fonts_src = [
 ];
 var fonts_dest = 'public/assets/media/fonts'; // Destination to send your font files
 
+// Array of directories and audio files to copy to production assets
+var audio_src = [
+	'src/media/audio/**/*',
+];
+var audio_dest = 'public/assets/media/audio'; // Destination to send your font files
+
 // Array of directories and json files to copy to production assets
 var json_src = [
 	'src/json/**/*',
@@ -43,6 +49,7 @@ var img_dest	= 'public/assets/media/images'; // Destination to send all images t
 var clean_dir = [
 	'public/assets/styles',
 	'public/assets/scripts',
+	'public/assets/media/audio',
 	'public/assets/media/images',
 	'public/assets/media/fonts',
 ];
@@ -174,13 +181,13 @@ gulp.task('fonts', function() {
 });
 
 //---------------------------------------------------------------------------------------------
-// TASK: json
+// TASK: audio
 //---------------------------------------------------------------------------------------------
-gulp.task('json', function() {
+gulp.task('audio', function() {
 
-	return gulp.src(json_src)
-		.pipe(gulp.dest(json_dest))
-		.pipe(notify({ message: 'JSON task complete.' }))
+	return gulp.src(audio_src)
+		.pipe(gulp.dest(audio_dest))
+		.pipe(notify({ message: 'Audio task complete.' }))
 		.pipe(filesize());
 });
 
@@ -234,7 +241,7 @@ gulp.task('clean', function() {
 
 gulp.task('build', function() {
 	runSequence('clean',
-    ['styles', 'modernizr', 'scripts', 'fonts', 'json', 'images', 'validate']);
+    ['styles', 'modernizr', 'scripts', 'fonts', 'audio', 'images', 'validate']);
 });
 
 
