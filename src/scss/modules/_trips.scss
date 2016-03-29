@@ -9,10 +9,15 @@
 	bottom: -193px;
 	
 	h4 {
+		position: relative;
 		@include font-body(70px, $white);
 		font-weight: 100;
 		letter-spacing: -0.05em;
 		margin: 0;
+		
+		a {
+			color: $white;
+		}
 	}
 	
 	.trips--cta {
@@ -36,6 +41,16 @@
 	text-align: right;
 	padding: 60px;
 	
+	h4 {
+		&::before {
+			@include iconfont($icon-stars-1, 108px);
+			transform: rotate(270deg) scaleX(-1);
+			position: absolute;
+			top: -41px;
+			right: 110px;
+		}
+	}
+	
 	.trips--cta::before {
 		left: -20px;
 	}
@@ -54,6 +69,16 @@
 		height: 180px;
 		left:0;
 		top: -47px;
+	}
+	
+	h4 {
+		&::before {
+			@include iconfont($icon-stars-2, 108px);
+			transform: rotate(270deg) scaleX(-1);
+			position: absolute;
+			top: -65px;
+			left: 150px;
+		}
 	}
 	
 	.trips--cta::before {

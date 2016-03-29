@@ -35,13 +35,26 @@
 
 .hero--h1 {
 	@include font-headline(90px);
+	margin: 0 0 20px;
 	text-align: center;
 	letter-spacing: -1.7px;
 }
 .hero--h2 {
-	@include font-body(20px);
+	position: relative;
+	@include font-body(20px, #dfdfdf);
 	text-align: center;
 	font-weight: 100;
+	margin: 0;
+	
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -105px;
+		width:1px;
+		height: 85px;
+		background: #a5a4a4;
+	}
 }
 
 .hero--stars--1 {

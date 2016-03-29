@@ -42,11 +42,15 @@ var main = {
     // STELLAR
     //---------------------------------------------------------------------------------------------
     stellar: function() {
-        
-        $.stellar({
-	        hideDistantElements: false,
-	        horizontalScrolling: false,
+
+        $(window).load(function () {
+	        $.stellar({
+		        hideDistantElements: false,
+		        horizontalScrolling: false,
+		        responsive: false,
+	        });
         });
+        
     },
     
     //---------------------------------------------------------------------------------------------

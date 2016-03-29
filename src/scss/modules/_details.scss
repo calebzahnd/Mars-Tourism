@@ -36,6 +36,7 @@ div.details {
 		
 	p {
 		@include font-body(16px, #dfdfdf);
+		font-weight: 100;
 		
 		@include screen-2xl {
 			@include font-size(20px);
@@ -71,7 +72,7 @@ div.details {
 }
 
 .details--expert--title {
-	@include font-body(16px, $white);
+	@include font-body(16px, #dfdfdf);
 }
 .details--expert--cta {
 	@include font-alt-headline(20px, $red);
