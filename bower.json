@@ -9,7 +9,7 @@
   "description": "Front End framework for Mars Tourism Landing Page",
   "dependencies": {
     "jquery": "~1.11.2",
-    "enquire": "~2.1.2",
+    "enquire": "^2.1.2",
     "susy": "~2.2.10",
     "jquery.stellar": "stellar#^0.6.2",
     "css-hamburgers": "~0.3.0"
