@@ -24,6 +24,9 @@ body {
 
 .line-spacer {
 	position: relative;
-	height: 0px !important;
-	overflow: visible;
+	
+	@include screen-lg {
+		height: 0px !important;
+		overflow: visible;
+	}
 }

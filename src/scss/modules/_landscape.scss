@@ -10,6 +10,10 @@
 .landscape--image--stars {
 	max-width: 100%;
 	position: relative;
+	
+	@include screen-md-only {
+		top: 0 !important;
+	}
 }
 .landscape--image--hills {
 	max-width: 100%;

@@ -4,43 +4,60 @@
 
 
 .intro {
-	position: absolute;
-	left: 50% !important;
-	top:-50%;
+	position: relative;
 	//@include container();
 	@include clearfix();
 	width: 100%;
 	max-width: 1550px;
+	border: 19px solid rgba($white, 0.06);
 	display: flex;
 	@include z-index(intro);
-	border: 19px solid rgba($white, 0.06);
-	opacity: 0;
-	transform: translateX(-50%) translateY(15%);
 	
-
-	@include screen-lg {
-		width: 90%;
+	@include screen-md-only {
+		width: span(8);
+		margin: -60px auto 100px;
 	}
+	
+	@include screen-lg {
+		position: absolute;
+		left: 50% !important;
+		top:-50%;
+		width: 90%;
+		transform: translateX(-50%) translateY(15%);
+		opacity: 0;
+		
+		.dom-ready & {
+			opacity: 1;
+			transform: translateX(-50%) translateY(-50%);
+			transition: all linear 0.6s;
+		}
+	}
+	
 	@include screen-2xl {
 		width: 66.66667%;
 	}
 	
-	.dom-ready & {
-		opacity: 1;
-		transform: translateX(-50%) translateY(-50%);
-		transition: all linear 0.6s;
-	}
+	
 }
 
 	
 .intro--content {
 	position: relative;
-	width: span(6);
+	width: span(8);
 	display: flex;
 	flex-direction: column;
 	order: 2;
 	color: $white;
 	background: linear-gradient(135deg, rgba($purple,1) 0%,rgba($red-dark,1) 100%);
+	
+	@include screen-md-only {
+		min-height: 400px;
+		width: span(12);
+	}
+	
+	@include screen-lg {
+		width: span(6);
+	}
 	
 	.intro--copy {
 		@include centerer();
@@ -81,12 +98,20 @@
 	}
 }
 .intro--image {
-	width: span(6);
+	width: span(4);
 	display: flex;
 	order: 1;
 	overflow: hidden;
 	font-size: 0;
 	transform: translateZ(0) scale(1);
+	
+	@include screen-md-only {
+		display: none;
+	}
+	
+	@include screen-lg {
+		width: span(6);
+	}
 	
 	img {
 		max-width: 100%;

@@ -4,21 +4,21 @@
 
 
 div.details {
-	position: absolute;
-	left: 50% !important;
-	top: -50%;
-	width: span(8);
+	position: relative;
+	width: 100%;
 	max-width: 1550px;
 	@include z-index(intro);
-	border: 19px solid rgba($white, 0.06);
-	transform: translate(-50%, -50%);
 	
-	@include screen-sm {
-		width: 80%;
-	}
+	
 	@include screen-lg {
+		position: absolute;
+		left: 50% !important;
+		top: -50%;
+		transform: translate(-50%, -50%);
 		width: 90%;
+		border: 19px solid rgba($white, 0.06);
 	}
+	
 	@include screen-2xl {
 		width: span(8);
 	}
