@@ -1460,6 +1460,7 @@ a.btn
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    font-size: 1.4rem;
     font-size: 16px;
     line-height: 24px;
 
@@ -1566,8 +1567,22 @@ a.btn .badge
 {
     font-size: 0; 
 
-    width: 50%;
+    width: 25%;
     height: 180px;
+}
+@media only screen and (min-width: 544px)
+{
+    .bonus--image
+    {
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 992px)
+{
+    .bonus--image
+    {
+        width: 50%;
+    }
 }
 .bonus--image img
 {
@@ -1583,25 +1598,47 @@ a.btn .badge
 {
     position: relative;
 
-    width: 50%;
+    width: 75%;
     height: 180px;
 
     background: linear-gradient(135deg, #362336 0%, #6c1408 100%);
+}
+@media only screen and (min-width: 544px)
+{
+    .bonus--content
+    {
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 992px)
+{
+    .bonus--content
+    {
+        width: 50%;
+    }
 }
 .bonus--content .bonus--content--copy
 {
     position: absolute;
     top: 50%;
 
-    padding: 0 50px; 
+    padding: 0 10px 0 25px; 
 
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
 }
+@media only screen and (min-width: 544px)
+{
+    .bonus--content .bonus--content--copy
+    {
+        padding: 0 50px;
+    }
+}
 .bonus--content h3
 {
     font-family: 'Futura Std', sans-serif;
-    font-size: 46px;
+    font-size: 26px;
+    font-size: 2.6rem;
     font-weight: 400;
     line-height: 1;
 
@@ -1620,11 +1657,20 @@ a.btn .badge
         font-size: 4rem;
     }
 }
+@media only screen and (min-width: 992px)
+{
+    .bonus--content h3
+    {
+        font-size: 36px;
+        font-size: 3.6rem;
+    }
+}
 
 .bonus--cta
 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 20px;
+    font-size: 2rem;
 
     transition: all ease-in-out .15s; 
     letter-spacing: 4px;
@@ -1678,7 +1724,7 @@ div.details
 
 .details--wrapper
 {
-    padding: 90px 60px; 
+    padding: 60px 30px; 
 
     background: linear-gradient(135deg, #6c1408 0%, #362336 100%);
 
@@ -1695,11 +1741,19 @@ div.details
 {
     clear: both;
 }
+@media only screen and (min-width: 768px)
+{
+    .details--wrapper
+    {
+        padding: 90px 60px;
+    }
+}
 
 .details--headline
 {
     font-family: 'Futura Std', sans-serif;
     font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
     line-height: 1;
 
@@ -1724,16 +1778,28 @@ div.details
 
     float: left;
 
-    width: 50%;
+    width: 100%;
     padding-right: 2.08333%;
     padding-left: 2.08333%;
 
     color: #fff;
 }
+@media only screen and (min-width: 544px)
+{
+    .details--copy
+    {
+        float: left;
+
+        width: 50%;
+        padding-right: 2.08333%; 
+        padding-left: 2.08333%;
+    }
+}
 .details--copy p
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 100; 
     line-height: 24px;
 
@@ -1758,14 +1824,26 @@ div.details
 {
     float: left;
 
-    width: 50%;
+    width: 100%;
     padding-right: 2.08333%; 
     padding-left: 2.08333%;
+}
+@media only screen and (min-width: 544px)
+{
+    .details--bullets
+    {
+        float: left;
+
+        width: 50%;
+        padding-right: 2.08333%; 
+        padding-left: 2.08333%;
+    }
 }
 .details--bullets ul
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    font-size: 1.4rem;
     line-height: 24px;
 
     letter-spacing: 0;
@@ -1778,6 +1856,20 @@ div.details
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
+            flex-direction: column; 
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+}
+@media only screen and (min-width: 768px)
+{
+    .details--expert
+    {
+                flex-direction: row; 
+
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+    }
 }
 
 .details--expert--image
@@ -1788,6 +1880,10 @@ div.details
 
     margin-right: 20px;
 }
+.details--expert--image img
+{
+    margin: 0 auto;
+}
 
 .details--expert--content
 {
@@ -1796,17 +1892,27 @@ div.details
     display:         flex;
             flex-direction: column;
 
+    text-align: center; 
+
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
 }
+@media only screen and (min-width: 768px)
+{
+    .details--expert--content
+    {
+        text-align: left;
+    }
+}
 
 .details--expert--title
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    font-size: 1.6rem;
     line-height: 24px;
 
     letter-spacing: 0;
@@ -1818,6 +1924,7 @@ div.details
 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 20px;
+    font-size: 2rem;
 
     transition: all ease-in-out .15s; 
     letter-spacing: 4px;
@@ -1869,15 +1976,12 @@ div.details
 
 .hero--content
 {
-    position: absolute;
+    position: relative;
     z-index: 13;
-    top: 50%;
-    left: 50% !important;
+    top: 190px; 
 
-    width: 90%; 
-
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    width: 90%;
+    margin: 0 auto;
 
     color: #fff;
 }
@@ -1886,6 +1990,18 @@ div.details
     .hero--content
     {
         width: 60%;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    .hero--content
+    {
+        position: absolute;
+        top: 50%;
+        left: 50% !important; 
+
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
 }
 @media only screen and (min-width: 992px)
@@ -1907,10 +2023,11 @@ div.details
 {
     font-family: 'Futura Std', sans-serif;
     font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 400;
     line-height: 1;
 
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
 
     text-align: center;
     letter-spacing: .6px;
@@ -1925,11 +2042,19 @@ div.details
         font-size: 7.5rem;
     }
 }
+@media only screen and (min-width: 2000px)
+{
+    .hero--h1
+    {
+        width: 765px;
+    }
+}
 
 .hero--h2
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
+    font-size: 2rem;
     font-weight: 100;
     line-height: 24px;
 
@@ -1942,18 +2067,31 @@ div.details
 
     color: #dfdfdf;
 }
-.hero--h2::after
+@media only screen and (min-width: 768px)
 {
-    position: absolute;
-    bottom: -105px;
-    left: 50%;
+    .hero--h2::after
+    {
+        position: absolute;
+        bottom: -105px;
+        left: 50%;
 
-    width: 1px;
-    height: 85px;
+        width: 1px;
+        height: 85px;
 
-    content: '';
+        content: '';
 
-    background: #a5a4a4;
+        background: #a5a4a4;
+    }
+}
+@media only screen and (min-width: 2000px)
+{
+    .hero--h2
+    {
+        font-size: 34px;
+        font-size: 3.4rem;
+
+        margin-top: 40px;
+    }
 }
 
 .hero--stars--1
@@ -1978,8 +2116,8 @@ div.details
     bottom: 0;
     left: 0;
 
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
 
     background: url('/assets/media/images/mars-hero-stars-1.png');
     background-repeat: repeat;
@@ -2004,10 +2142,6 @@ div.details
 {
     position: relative;
     z-index: 50; 
-
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
 
     width: 100%;
     max-width: 1550px;
@@ -2043,6 +2177,10 @@ div.details
         top: -50%;
         left: 50% !important;
 
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+
         width: 90%;
 
         -webkit-transform: translateX(-50%) translateY(15%);
@@ -2076,7 +2214,7 @@ div.details
     display:         flex;
             flex-direction: column;
 
-    width: 66.66667%;
+    width: 100%;
 
     color: #fff;
     background: linear-gradient(135deg, #362336 0%, #6c1408 100%); 
@@ -2104,20 +2242,26 @@ div.details
 }
 .intro--content .intro--copy
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
     width: 100%; 
     padding: 70px;
+}
+@media only screen and (min-width: 992px)
+{
+    .intro--content .intro--copy
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
 
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
 }
 .intro--content h3
 {
     font-family: 'Futura Std', sans-serif;
     font-size: 28px;
+    font-size: 2.8rem;
     font-weight: 400;
     line-height: 1;
 
@@ -2136,6 +2280,14 @@ div.details
     {
         font-size: 34px;
         font-size: 3.4rem;
+    }
+}
+@media only screen and (min-width: 2000px)
+{
+    .intro--content h3
+    {
+        font-size: 44px;
+        font-size: 4.4rem;
     }
 }
 .intro--content h3::before
@@ -2160,10 +2312,19 @@ div.details
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+@media only screen and (min-width: 2000px)
+{
+    .intro--content h3::before
+    {
+        font-size: 100px;
+        font-size: 10rem;
+    }
+}
 .intro--content p
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 100; 
     line-height: 24px;
 
@@ -2183,6 +2344,7 @@ div.details
 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 20px;
+    font-size: 2rem;
 
     transition: all ease-in-out .15s; 
     letter-spacing: 4px;
@@ -2201,21 +2363,9 @@ div.details
 
 .intro--image
 {
-    font-size: 0;
+    font-size: 0; 
 
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
-    overflow: hidden;
-
-    width: 33.33333%;
-
-    -webkit-transform: translateZ(0) scale(1);
-            transform: translateZ(0) scale(1); 
-
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-            order: 1;
+    width: 100%;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px)
 {
@@ -2228,7 +2378,19 @@ div.details
 {
     .intro--image
     {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+        overflow: hidden;
+
         width: 50%;
+
+        -webkit-transform: translateZ(0) scale(1);
+                transform: translateZ(0) scale(1); 
+
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+                order: 1;
     }
 }
 .intro--image img
@@ -2246,19 +2408,23 @@ div.details
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
 }
-.intro--image img:hover
+@media only screen and (min-width: 992px)
 {
-    -webkit-transform: translateZ(0) scale(1.1);
-            transform: translateZ(0) scale(1.1); 
+    .intro--image img:hover
+    {
+        -webkit-transform: translateZ(0) scale(1.1);
+                transform: translateZ(0) scale(1.1); 
 
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
 }
 
 .intro--sidebar--promo
 {
     font-family: 'Futura Std', sans-serif;
     font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 400;
     line-height: 1;
 
@@ -2518,6 +2684,7 @@ div.details
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 26px;
+    font-size: 2.6rem;
     line-height: 24px;
     line-height: 1.5; 
 
@@ -2533,6 +2700,14 @@ div.details
     letter-spacing: 0;
 
     color: #fff;
+}
+@media only screen and (min-width: 2000px)
+{
+    .landscape--content
+    {
+        font-size: 40px;
+        font-size: 4rem;
+    }
 }
 
 /*--------------------------*/
@@ -2571,7 +2746,8 @@ div.details
 .trips h4
 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 70px;
+    font-size: 50px;
+    font-size: 5rem;
     font-weight: 100;
     line-height: 24px;
 
@@ -2584,6 +2760,14 @@ div.details
 
     color: #fff;
 }
+@media only screen and (min-width: 768px)
+{
+    .trips h4
+    {
+        font-size: 70px;
+        font-size: 7rem;
+    }
+}
 .trips h4 a
 {
     color: #fff;
@@ -2592,6 +2776,7 @@ div.details
 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 16px;
+    font-size: 1.6rem;
 
     position: relative;
 
@@ -2640,9 +2825,23 @@ div.details
 
     width: 50%;
     max-height: 175px; 
-    padding: 60px;
+    padding: 30px;
 
     text-align: right;
+}
+@media only screen and (min-width: 544px)
+{
+    .trips--7
+    {
+        padding: 45px;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    .trips--7
+    {
+        padding: 60px;
+    }
 }
 .trips--7 h4::before
 {
@@ -2667,6 +2866,24 @@ div.details
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+@media only screen and (min-width: 0) and (max-width: 543px)
+{
+    .trips--7 h4::before
+    {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    .trips--7 h4::before
+    {
+        font-size: 108px;
+        font-size: 10.8rem;
+
+        top: -41px;
+        right: 40px;
+    }
+}
 .trips--7 .trips--cta::before
 {
     left: -20px;
@@ -2678,7 +2895,21 @@ div.details
 
     width: 50%;
     max-height: 175px; 
-    padding: 60px;
+    padding: 30px;
+}
+@media only screen and (min-width: 544px)
+{
+    .trips--11
+    {
+        padding: 45px;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    .trips--11
+    {
+        padding: 60px;
+    }
 }
 .trips--11::before
 {
@@ -2696,14 +2927,14 @@ div.details
 .trips--11 h4::before
 {
     font-family: 'iconfont-mars';
-    font-size: 108px;
+    font-size: 78px;
     font-weight: normal;
     font-style: normal;
     font-variant: normal;
     line-height: 1;
 
     position: absolute;
-    top: -65px;
+    top: -55px;
     left: 150px; 
 
     content: '';
@@ -2715,6 +2946,24 @@ div.details
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+@media only screen and (min-width: 0) and (max-width: 543px)
+{
+    .trips--11 h4::before
+    {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    .trips--11 h4::before
+    {
+        font-size: 108px;
+        font-size: 10.8rem;
+
+        top: -65px;
+        left: 90px;
+    }
 }
 .trips--11 .trips--cta::before
 {

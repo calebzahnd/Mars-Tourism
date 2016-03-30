@@ -10,7 +10,6 @@
 	width: 100%;
 	max-width: 1550px;
 	border: 19px solid rgba($white, 0.06);
-	display: flex;
 	@include z-index(intro);
 	
 	@include screen-md-only {
@@ -19,6 +18,7 @@
 	}
 	
 	@include screen-lg {
+		display: flex;
 		position: absolute;
 		left: 50% !important;
 		top:-50%;
@@ -43,7 +43,7 @@
 	
 .intro--content {
 	position: relative;
-	width: span(8);
+	width: span(12);
 	display: flex;
 	flex-direction: column;
 	order: 2;
@@ -60,9 +60,12 @@
 	}
 	
 	.intro--copy {
-		@include centerer();
 		padding: 70px;
 		width: 100%;
+		
+		@include screen-lg {
+			@include centerer();
+		}
 	}
 	h3 {
 		position: relative;
@@ -74,12 +77,19 @@
 		@include screen-2xl {
 			@include font-size(34px);
 		}
+		@include screen-3xl {
+			@include font-size(44px);
+		}
 		
 		&::before {
 			@include iconfont($icon-jupiter, 65px);
 			display: block;
 			text-align: center;
 			margin-bottom: 20px;
+			
+			@include screen-3xl {
+				@include font-size(100px);
+			}
 		}
 	}
 	
@@ -98,19 +108,19 @@
 	}
 }
 .intro--image {
-	width: span(4);
-	display: flex;
-	order: 1;
-	overflow: hidden;
+	width: span(12);
 	font-size: 0;
-	transform: translateZ(0) scale(1);
 	
 	@include screen-md-only {
 		display: none;
 	}
 	
 	@include screen-lg {
+		display: flex;
+		order: 1;
 		width: span(6);
+		overflow: hidden;
+		transform: translateZ(0) scale(1);
 	}
 	
 	img {
@@ -120,9 +130,11 @@
 		backface-visibility: hidden;
 		transform: translateZ(0) scale(1);
 		
-		&:hover {
-			backface-visibility: hidden;
-			transform: translateZ(0) scale(1.1);
+		@include screen-lg {
+			&:hover {
+				backface-visibility: hidden;
+				transform: translateZ(0) scale(1.1);
+			}
 		}
 	}
 }

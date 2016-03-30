@@ -10,10 +10,14 @@
 	
 	h4 {
 		position: relative;
-		@include font-body(70px, $white);
+		@include font-body(50px, $white);
 		font-weight: 100;
 		letter-spacing: -0.05em;
 		margin: 0;
+		
+		@include screen-md {
+			@include font-size(70px);
+		}
 		
 		a {
 			color: $white;
@@ -39,16 +43,34 @@
 	position: relative;
 	width: 50%;
 	text-align: right;
-	padding: 60px;
+	padding: 30px;
 	max-height: 175px;
+	
+	@include screen-sm {
+		padding: 45px;
+	}
+	@include screen-md {
+		padding: 60px;
+	}
 	
 	h4 {
 		&::before {
+			
+			@include screen-xs-only {
+				display: none;
+			}
+			
 			@include iconfont($icon-stars-1, 108px);
 			transform: rotate(270deg) scaleX(-1);
 			position: absolute;
 			top: -41px;
 			right: 110px;
+			
+			@include screen-md {
+				@include font-size(108px);
+				top: -41px;
+				right: 40px;
+			}
 		}
 	}
 	
@@ -60,8 +82,15 @@
 .trips--11 {
 	position: relative;
 	width: 50%;
-	padding: 60px;
+	padding: 30px;
 	max-height: 175px;
+	
+	@include screen-sm {
+		padding: 45px;
+	}
+	@include screen-md {
+		padding: 60px;
+	}
 	
 	&::before {
 		content: '';
@@ -75,11 +104,23 @@
 	
 	h4 {
 		&::before {
-			@include iconfont($icon-stars-2, 108px);
+			
+			@include screen-xs-only {
+				display: none;
+			}
+			
+			@include iconfont($icon-stars-2, 78px);
 			transform: rotate(270deg) scaleX(-1);
 			position: absolute;
-			top: -65px;
+			top: -55px;
 			left: 150px;
+			
+			
+			@include screen-md {
+				@include font-size(108px);
+				top: -65px;
+				left: 90px;
+			}
 		}
 	}
 	

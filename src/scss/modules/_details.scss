@@ -27,7 +27,11 @@ div.details {
 .details--wrapper {
 	@include clearfix();
 	background: linear-gradient(135deg, rgba($red-dark,1) 0%,rgba($purple,1) 100%);
-	padding: 90px 60px;
+	padding: 60px 30px;
+	
+	@include screen-md {
+		padding: 90px 60px;
+	}
 }
 
 .details--headline {
@@ -40,8 +44,12 @@ div.details {
 
 .details--copy {
 	position: relative;
-	@include span(6);
+	@include span(12);
 	color: $white;
+	
+	@include screen-sm {
+		@include span(6);
+	}
 	
 		
 	p {
@@ -58,7 +66,11 @@ div.details {
 	}
 }
 .details--bullets {
-	@include span(6);
+	@include span(12);
+	
+	@include screen-sm {
+		@include span(6);
+	}
 	
 	ul {
 		@include font-body(14px, rgba($white, 0.5));
@@ -68,17 +80,31 @@ div.details {
 
 .details--expert {
 	display: flex;
+	flex-direction: column;
+	
+	@include screen-md {
+		flex-direction: row;
+	}
 }
 
 .details--expert--image {
 	display: flex;
 	margin-right: 20px;
+	
+	img {
+		margin: 0 auto;
+	}
 }
 
 .details--expert--content {
 	display: flex;
 	flex-direction: column;	
 	justify-content: center;
+	text-align: center;
+	
+	@include screen-md {
+		text-align: left;
+	}
 }
 
 .details--expert--title {

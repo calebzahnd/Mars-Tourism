@@ -25,16 +25,21 @@
 }
 
 .hero--content {
-	position: absolute;
-	top:50%;
-	transform: translate(-50%, -50%);
-	left: 50% !important;
 	color: $white;
 	@include z-index(hero--content);
 	width: 90%;
+	margin: 0 auto;
+    position: relative;
+    top: 190px;
 	
 	@include screen-sm {
 		width: 60%;
+	}
+	@include screen-md {
+		position: absolute;
+		top:50%;
+		transform: translate(-50%, -50%);
+		left: 50% !important;
 	}
 	@include screen-lg {
 		width: 75%;
@@ -47,13 +52,17 @@
 
 .hero--h1 {
 	@include font-headline(48px);
-	margin: 0 0 20px;
+	margin: 0 auto 20px;
 	text-align: center;
 	letter-spacing: -1.7px;
 	text-transform: uppercase;
 	
 	@include screen-lg {
 		@include font-size(75px);
+	}
+	
+	@include screen-3xl {
+		width: 765px;
 	}
 }
 .hero--h2 {
@@ -63,14 +72,20 @@
 	font-weight: 100;
 	margin: 0;
 	
-	&::after {
-		content: '';
-		position: absolute;
-		left: 50%;
-		bottom: -105px;
-		width:1px;
-		height: 85px;
-		background: #a5a4a4;
+	@include screen-md {
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: -105px;
+			width:1px;
+			height: 85px;
+			background: #a5a4a4;
+		}
+	}
+	@include screen-3xl {
+		@include font-size(34px);
+		margin-top: 40px;
 	}
 }
 
@@ -86,7 +101,7 @@
 }
 .hero--stars--2 {
 	background: url('/assets/media/images/mars-hero-stars-1.png');
-	transform: rotate(90deg);
+	transform: rotate(180deg);
 	background-repeat: repeat;
 	position: absolute;
 	top:0;
