@@ -7,6 +7,7 @@ var styles_dest	= 'public/assets/styles/'; // Destination to send your compiled 
 
 // Array of Javascript files to concatenate and minify
 var js_concat = [
+	'src/vendor/picturefill/dist/picturefill.js',
 	'src/vendor/enquire/dist/enquire.js',
 	'src/vendor/jquery.stellar/jquery.stellar.js',
 	'src/js/scripts.js',

@@ -12,6 +12,7 @@
     "enquire": "^2.1.2",
     "susy": "~2.2.10",
     "jquery.stellar": "stellar#^0.6.2",
-    "css-hamburgers": "~0.3.0"
+    "css-hamburgers": "~0.3.0",
+    "picturefill": "~3.0.2"
   }
 }
