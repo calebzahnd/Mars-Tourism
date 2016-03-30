@@ -107,13 +107,18 @@
 
 .landscape--content {
     position: absolute;
-    top:50%;
+    top:30%;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    @include font-body(26px, $white);
+    @include font-body(20px, $white);
     width: 75%;
     text-align: center;
     line-height: 1.5;
+    
+    @include screen-md {
+	    top:50%;
+	    @include font-size(26px);
+    }
     
     @include screen-3xl {
 		@include font-size(40px);

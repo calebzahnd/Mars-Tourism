@@ -2243,7 +2243,14 @@ div.details
 .intro--content .intro--copy
 {
     width: 100%; 
-    padding: 70px;
+    padding: 30px;
+}
+@media only screen and (min-width: 544px)
+{
+    .intro--content .intro--copy
+    {
+        padding: 70px;
+    }
 }
 @media only screen and (min-width: 992px)
 {
@@ -2683,13 +2690,13 @@ div.details
 .landscape--content
 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 26px;
-    font-size: 2.6rem;
+    font-size: 20px;
+    font-size: 2rem;
     line-height: 24px;
     line-height: 1.5; 
 
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50% !important;
 
     width: 75%;
@@ -2700,6 +2707,16 @@ div.details
     letter-spacing: 0;
 
     color: #fff;
+}
+@media only screen and (min-width: 768px)
+{
+    .landscape--content
+    {
+        font-size: 26px;
+        font-size: 2.6rem; 
+
+        top: 50%;
+    }
 }
 @media only screen and (min-width: 2000px)
 {
