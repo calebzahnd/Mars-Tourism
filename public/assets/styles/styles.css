@@ -2770,7 +2770,7 @@ div.details
 .trips
 {
     position: absolute;
-    bottom: -193px; 
+    bottom: -120px; 
 
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2778,11 +2778,18 @@ div.details
 
     width: 100%;
 }
+@media only screen and (min-width: 544px)
+{
+    .trips
+    {
+        bottom: -193px;
+    }
+}
 .trips h4
 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 50px;
-    font-size: 5rem;
+    font-size: 44px;
+    font-size: 4.4rem;
     font-weight: 100;
     line-height: 24px;
 
@@ -2794,6 +2801,14 @@ div.details
     letter-spacing: -.05em;
 
     color: #fff;
+}
+@media only screen and (min-width: 544px)
+{
+    .trips h4
+    {
+        font-size: 50px;
+        font-size: 5rem;
+    }
 }
 @media only screen and (min-width: 768px)
 {
@@ -2860,7 +2875,7 @@ div.details
 
     width: 50%;
     max-height: 175px; 
-    padding: 30px;
+    padding: 20px 20px 0 40px;
 
     text-align: right;
 }
@@ -2930,7 +2945,7 @@ div.details
 
     width: 50%;
     max-height: 175px; 
-    padding: 30px;
+    padding: 20px 40px 0 20px;
 }
 @media only screen and (min-width: 544px)
 {
