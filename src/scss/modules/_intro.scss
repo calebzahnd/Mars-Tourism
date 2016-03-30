@@ -17,6 +17,8 @@
 		margin: -60px auto 100px;
 	}
 	
+	
+	
 	@include screen-lg {
 		display: flex;
 		position: absolute;
@@ -31,6 +33,10 @@
 			transform: translateX(-50%) translateY(-50%);
 			transition: all linear 0.6s;
 		}
+	}
+	
+	@include screen-xl {
+		width: 80%;
 	}
 	
 	@include screen-2xl {

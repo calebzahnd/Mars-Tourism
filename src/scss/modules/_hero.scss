@@ -63,6 +63,13 @@
 	text-transform: uppercase;
 	
 	@include screen-lg {
+		@include font-size(55px);
+	}
+	@include screen-lg-only {
+		width: 500px;
+	}
+	
+	@include screen-xl {
 		@include font-size(75px);
 	}
 	

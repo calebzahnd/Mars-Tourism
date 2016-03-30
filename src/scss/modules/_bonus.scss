@@ -21,11 +21,23 @@
 	
 	@include screen-lg {
 		width: 50%;
+		overflow: hidden;
 	}
 	
 	img {
 		max-width: 100%;
 		@include object-fit();
+
+		@include screen-lg {
+			transition: all ease-in-out 1.5s;
+			backface-visibility: hidden;
+			transform: translateZ(0) scale(1);
+			&:hover {
+				backface-visibility: hidden;
+				transform: translateZ(0) scale(1.1);
+				transition: all ease-in-out 1.5s;
+			}
+		}
 	}
 }
 

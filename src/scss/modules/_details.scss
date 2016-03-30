@@ -19,6 +19,10 @@ div.details {
 		border: 19px solid rgba($white, 0.06);
 	}
 	
+	@include screen-xl {
+		width: 80%;
+	}
+	
 	@include screen-2xl {
 		width: span(8);
 	}

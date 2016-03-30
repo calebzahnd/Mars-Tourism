@@ -63,9 +63,7 @@
 	h4 {
 		&::before {
 			
-			@include screen-xs-only {
-				display: none;
-			}
+			display: none;
 			
 			@include iconfont($icon-stars-1, 108px);
 			transform: rotate(270deg) scaleX(-1);
@@ -112,9 +110,7 @@
 	h4 {
 		&::before {
 			
-			@include screen-xs-only {
-				display: none;
-			}
+			display: none;
 			
 			@include iconfont($icon-stars-2, 78px);
 			transform: rotate(270deg) scaleX(-1);
