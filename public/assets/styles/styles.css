@@ -119,9 +119,7 @@
     cursor: pointer;
     transition-timing-function: linear;
     transition-duration: .15s;
-    transition-property: opacity, -webkit-filter;
-    transition-property: opacity, filter;
-    transition-property: opacity, filter, -webkit-filter;
+    transition-property: opacity, -webkit-filter, opacity, filter;
     text-transform: none;
 
     color: inherit;
@@ -164,7 +162,6 @@
     transition-duration: .15s;
     transition-property: -webkit-transform;
     transition-property:         transform;
-    transition-property:         transform, -webkit-transform;
 
     border-radius: 4px;
     background-color: #fff;
@@ -196,16 +193,14 @@
 
 .hamburger--3dx .hamburger-inner
 {
-    transition: background-color 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform .2s cubic-bezier(.645, .045, .355, 1);
-    transition: transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
-    transition: transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform .2s cubic-bezier(.645, .045, .355, 1);
+    transition: -webkit-transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
+    transition:         transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
 }
 .hamburger--3dx .hamburger-inner::before,
 .hamburger--3dx .hamburger-inner::after
 {
     transition: -webkit-transform 0s .1s cubic-bezier(.645, .045, .355, 1);
     transition:         transform 0s .1s cubic-bezier(.645, .045, .355, 1);
-    transition:         transform 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform 0s .1s cubic-bezier(.645, .045, .355, 1);
 }
 
 .hamburger--3dx.is-active .hamburger-inner
@@ -237,16 +232,14 @@
 
 .hamburger--3dx-r .hamburger-inner
 {
-    transition: background-color 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform .2s cubic-bezier(.645, .045, .355, 1);
-    transition: transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
-    transition: transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform .2s cubic-bezier(.645, .045, .355, 1);
+    transition: -webkit-transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
+    transition:         transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
 }
 .hamburger--3dx-r .hamburger-inner::before,
 .hamburger--3dx-r .hamburger-inner::after
 {
     transition: -webkit-transform 0s .1s cubic-bezier(.645, .045, .355, 1);
     transition:         transform 0s .1s cubic-bezier(.645, .045, .355, 1);
-    transition:         transform 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform 0s .1s cubic-bezier(.645, .045, .355, 1);
 }
 
 .hamburger--3dx-r.is-active .hamburger-inner
@@ -278,16 +271,14 @@
 
 .hamburger--3dy .hamburger-inner
 {
-    transition: background-color 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform .2s cubic-bezier(.645, .045, .355, 1);
-    transition: transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
-    transition: transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform .2s cubic-bezier(.645, .045, .355, 1);
+    transition: -webkit-transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
+    transition:         transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
 }
 .hamburger--3dy .hamburger-inner::before,
 .hamburger--3dy .hamburger-inner::after
 {
     transition: -webkit-transform 0s .1s cubic-bezier(.645, .045, .355, 1);
     transition:         transform 0s .1s cubic-bezier(.645, .045, .355, 1);
-    transition:         transform 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform 0s .1s cubic-bezier(.645, .045, .355, 1);
 }
 
 .hamburger--3dy.is-active .hamburger-inner
@@ -319,16 +310,14 @@
 
 .hamburger--3dy-r .hamburger-inner
 {
-    transition: background-color 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform .2s cubic-bezier(.645, .045, .355, 1);
-    transition: transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
-    transition: transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform .2s cubic-bezier(.645, .045, .355, 1);
+    transition: -webkit-transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
+    transition:         transform .2s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
 }
 .hamburger--3dy-r .hamburger-inner::before,
 .hamburger--3dy-r .hamburger-inner::after
 {
     transition: -webkit-transform 0s .1s cubic-bezier(.645, .045, .355, 1);
     transition:         transform 0s .1s cubic-bezier(.645, .045, .355, 1);
-    transition:         transform 0s .1s cubic-bezier(.645, .045, .355, 1), -webkit-transform 0s .1s cubic-bezier(.645, .045, .355, 1);
 }
 
 .hamburger--3dy-r.is-active .hamburger-inner
@@ -386,14 +375,12 @@
 {
     transition: top .1s .15s ease, -webkit-transform .15s cubic-bezier(.165, .84, .44, 1);
     transition: top .1s .15s ease, transform .15s cubic-bezier(.165, .84, .44, 1);
-    transition: top .1s .15s ease, transform .15s cubic-bezier(.165, .84, .44, 1), -webkit-transform .15s cubic-bezier(.165, .84, .44, 1);
 }
 
 .hamburger--arrowalt .hamburger-inner::after
 {
     transition: bottom .1s .15s ease, -webkit-transform .15s cubic-bezier(.165, .84, .44, 1);
     transition: bottom .1s .15s ease, transform .15s cubic-bezier(.165, .84, .44, 1);
-    transition: bottom .1s .15s ease, transform .15s cubic-bezier(.165, .84, .44, 1), -webkit-transform .15s cubic-bezier(.165, .84, .44, 1);
 }
 
 .hamburger--arrowalt.is-active .hamburger-inner::before
@@ -401,8 +388,7 @@
     top: 0;
 
     transition: top .1s ease, -webkit-transform .15s .1s cubic-bezier(.895, .03, .685, .22);
-    transition: top .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22);
-    transition: top .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22), -webkit-transform .15s .1s cubic-bezier(.895, .03, .685, .22); 
+    transition: top .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22); 
     -webkit-transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(.7, 1);
             transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(.7, 1);
 }
@@ -412,8 +398,7 @@
     bottom: 0;
 
     transition: bottom .1s ease, -webkit-transform .15s .1s cubic-bezier(.895, .03, .685, .22);
-    transition: bottom .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22);
-    transition: bottom .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22), -webkit-transform .15s .1s cubic-bezier(.895, .03, .685, .22); 
+    transition: bottom .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22); 
     -webkit-transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(.7, 1);
             transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(.7, 1);
 }
@@ -425,14 +410,12 @@
 {
     transition: top .1s .15s ease, -webkit-transform .15s cubic-bezier(.165, .84, .44, 1);
     transition: top .1s .15s ease, transform .15s cubic-bezier(.165, .84, .44, 1);
-    transition: top .1s .15s ease, transform .15s cubic-bezier(.165, .84, .44, 1), -webkit-transform .15s cubic-bezier(.165, .84, .44, 1);
 }
 
 .hamburger--arrowalt-r .hamburger-inner::after
 {
     transition: bottom .1s .15s ease, -webkit-transform .15s cubic-bezier(.165, .84, .44, 1);
     transition: bottom .1s .15s ease, transform .15s cubic-bezier(.165, .84, .44, 1);
-    transition: bottom .1s .15s ease, transform .15s cubic-bezier(.165, .84, .44, 1), -webkit-transform .15s cubic-bezier(.165, .84, .44, 1);
 }
 
 .hamburger--arrowalt-r.is-active .hamburger-inner::before
@@ -440,8 +423,7 @@
     top: 0;
 
     transition: top .1s ease, -webkit-transform .15s .1s cubic-bezier(.895, .03, .685, .22);
-    transition: top .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22);
-    transition: top .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22), -webkit-transform .15s .1s cubic-bezier(.895, .03, .685, .22); 
+    transition: top .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22); 
     -webkit-transform: translate3d(8px, -10px, 0) rotate(45deg) scale(.7, 1);
             transform: translate3d(8px, -10px, 0) rotate(45deg) scale(.7, 1);
 }
@@ -451,8 +433,7 @@
     bottom: 0;
 
     transition: bottom .1s ease, -webkit-transform .15s .1s cubic-bezier(.895, .03, .685, .22);
-    transition: bottom .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22);
-    transition: bottom .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22), -webkit-transform .15s .1s cubic-bezier(.895, .03, .685, .22); 
+    transition: bottom .1s ease, transform .15s .1s cubic-bezier(.895, .03, .685, .22); 
     -webkit-transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(.7, 1);
             transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(.7, 1);
 }
@@ -508,7 +489,6 @@
 {
     transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
     transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19);
-    transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--collapse.is-active .hamburger-inner
@@ -531,8 +511,7 @@
     top: 0;
 
     transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), -webkit-transform .15s .42s cubic-bezier(.215, .61, .355, 1);
-    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .42s cubic-bezier(.215, .61, .355, 1);
-    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .42s cubic-bezier(.215, .61, .355, 1), -webkit-transform .15s .42s cubic-bezier(.215, .61, .355, 1); 
+    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .42s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
 }
@@ -559,7 +538,6 @@
 {
     transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
     transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19);
-    transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--collapse-r.is-active .hamburger-inner
@@ -582,8 +560,7 @@
     top: 0;
 
     transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), -webkit-transform .15s .42s cubic-bezier(.215, .61, .355, 1);
-    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .42s cubic-bezier(.215, .61, .355, 1);
-    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .42s cubic-bezier(.215, .61, .355, 1), -webkit-transform .15s .42s cubic-bezier(.215, .61, .355, 1); 
+    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .42s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
 }
@@ -610,7 +587,6 @@
 
     transition: -webkit-transform .4s cubic-bezier(.68, -.55, .265, 1.55);
     transition:         transform .4s cubic-bezier(.68, -.55, .265, 1.55);
-    transition:         transform .4s cubic-bezier(.68, -.55, .265, 1.55), -webkit-transform .4s cubic-bezier(.68, -.55, .265, 1.55);
 }
 
 .hamburger--elastic.is-active .hamburger-inner
@@ -654,7 +630,6 @@
 
     transition: -webkit-transform .4s cubic-bezier(.68, -.55, .265, 1.55);
     transition:         transform .4s cubic-bezier(.68, -.55, .265, 1.55);
-    transition:         transform .4s cubic-bezier(.68, -.55, .265, 1.55), -webkit-transform .4s cubic-bezier(.68, -.55, .265, 1.55);
 }
 
 .hamburger--elastic-r.is-active .hamburger-inner
@@ -691,18 +666,16 @@
 {
     left: 0;
 
-    transition: top .05s .2s linear, left .2s .25s ease-in, -webkit-transform .2s cubic-bezier(.6, .04, .98, .335);
-    transition: transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, left .2s .25s ease-in;
-    transition: transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, left .2s .25s ease-in, -webkit-transform .2s cubic-bezier(.6, .04, .98, .335);
+    transition: -webkit-transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, left .2s .25s ease-in;
+    transition:         transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, left .2s .25s ease-in;
 }
 .hamburger--emphatic .hamburger-inner::after
 {
     top: 10px;
     right: 0;
 
-    transition: top .05s .2s linear, right .2s .25s ease-in, -webkit-transform .2s cubic-bezier(.6, .04, .98, .335);
-    transition: transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, right .2s .25s ease-in;
-    transition: transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, right .2s .25s ease-in, -webkit-transform .2s cubic-bezier(.6, .04, .98, .335);
+    transition: -webkit-transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, right .2s .25s ease-in;
+    transition:         transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, right .2s .25s ease-in;
 }
 .hamburger--emphatic.is-active .hamburger-inner
 {
@@ -717,8 +690,7 @@
     left: -80px;
 
     transition: left .2s ease-out, top .05s .2s linear, -webkit-transform .2s .25s cubic-bezier(.075, .82, .165, 1);
-    transition: left .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1);
-    transition: left .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1), -webkit-transform .2s .25s cubic-bezier(.075, .82, .165, 1); 
+    transition: left .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1); 
     -webkit-transform: translate3d(80px, 80px, 0) rotate(45deg);
             transform: translate3d(80px, 80px, 0) rotate(45deg);
 }
@@ -728,8 +700,7 @@
     right: -80px;
 
     transition: right .2s ease-out, top .05s .2s linear, -webkit-transform .2s .25s cubic-bezier(.075, .82, .165, 1);
-    transition: right .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1);
-    transition: right .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1), -webkit-transform .2s .25s cubic-bezier(.075, .82, .165, 1); 
+    transition: right .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1); 
     -webkit-transform: translate3d(-80px, 80px, 0) rotate(-45deg);
             transform: translate3d(-80px, 80px, 0) rotate(-45deg);
 }
@@ -749,18 +720,16 @@
 {
     left: 0;
 
-    transition: top .05s .2s linear, left .2s .25s ease-in, -webkit-transform .2s cubic-bezier(.6, .04, .98, .335);
-    transition: transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, left .2s .25s ease-in;
-    transition: transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, left .2s .25s ease-in, -webkit-transform .2s cubic-bezier(.6, .04, .98, .335);
+    transition: -webkit-transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, left .2s .25s ease-in;
+    transition:         transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, left .2s .25s ease-in;
 }
 .hamburger--emphatic-r .hamburger-inner::after
 {
     top: 10px;
     right: 0;
 
-    transition: top .05s .2s linear, right .2s .25s ease-in, -webkit-transform .2s cubic-bezier(.6, .04, .98, .335);
-    transition: transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, right .2s .25s ease-in;
-    transition: transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, right .2s .25s ease-in, -webkit-transform .2s cubic-bezier(.6, .04, .98, .335);
+    transition: -webkit-transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, right .2s .25s ease-in;
+    transition:         transform .2s cubic-bezier(.6, .04, .98, .335), top .05s .2s linear, right .2s .25s ease-in;
 }
 .hamburger--emphatic-r.is-active .hamburger-inner
 {
@@ -775,8 +744,7 @@
     left: -80px;
 
     transition: left .2s ease-out, top .05s .2s linear, -webkit-transform .2s .25s cubic-bezier(.075, .82, .165, 1);
-    transition: left .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1);
-    transition: left .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1), -webkit-transform .2s .25s cubic-bezier(.075, .82, .165, 1); 
+    transition: left .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1); 
     -webkit-transform: translate3d(80px, -80px, 0) rotate(-45deg);
             transform: translate3d(80px, -80px, 0) rotate(-45deg);
 }
@@ -786,8 +754,7 @@
     right: -80px;
 
     transition: right .2s ease-out, top .05s .2s linear, -webkit-transform .2s .25s cubic-bezier(.075, .82, .165, 1);
-    transition: right .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1);
-    transition: right .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1), -webkit-transform .2s .25s cubic-bezier(.075, .82, .165, 1); 
+    transition: right .2s ease-out, top .05s .2s linear, transform .2s .25s cubic-bezier(.075, .82, .165, 1); 
     -webkit-transform: translate3d(-80px, -80px, 0) rotate(45deg);
             transform: translate3d(-80px, -80px, 0) rotate(45deg);
 }
@@ -805,9 +772,8 @@
 
     transition-timing-function: ease;
     transition-duration: .2s; 
-    transition-property: opacity, -webkit-transform;
-    transition-property: transform, opacity;
-    transition-property: transform, opacity, -webkit-transform;
+    transition-property: -webkit-transform, opacity;
+    transition-property:         transform, opacity;
 }
 .hamburger--slider .hamburger-inner::after
 {
@@ -845,9 +811,8 @@
 
     transition-timing-function: ease;
     transition-duration: .2s; 
-    transition-property: opacity, -webkit-transform;
-    transition-property: transform, opacity;
-    transition-property: transform, opacity, -webkit-transform;
+    transition-property: -webkit-transform, opacity;
+    transition-property:         transform, opacity;
 }
 .hamburger--slider-r .hamburger-inner::after
 {
@@ -887,7 +852,6 @@
 
     transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
     transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19);
-    transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
 }
 .hamburger--spring .hamburger-inner::after
 {
@@ -895,7 +859,6 @@
 
     transition: top .3s .3s cubic-bezier(.33333, .66667, .66667, 1), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
     transition: top .3s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19);
-    transition: top .3s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--spring.is-active .hamburger-inner
@@ -910,7 +873,6 @@
 
     transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), -webkit-transform .15s .32s cubic-bezier(.215, .61, .355, 1);
     transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .32s cubic-bezier(.215, .61, .355, 1);
-    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .32s cubic-bezier(.215, .61, .355, 1), -webkit-transform .15s .32s cubic-bezier(.215, .61, .355, 1);
     -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
             transform: translate3d(0, 10px, 0) rotate(45deg);
 }
@@ -920,7 +882,6 @@
 
     transition: top .3s cubic-bezier(.33333, 0, .66667, .33333), -webkit-transform .15s .32s cubic-bezier(.215, .61, .355, 1);
     transition: top .3s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .32s cubic-bezier(.215, .61, .355, 1);
-    transition: top .3s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .32s cubic-bezier(.215, .61, .355, 1), -webkit-transform .15s .32s cubic-bezier(.215, .61, .355, 1);
     -webkit-transform: translate3d(0, 10px, 0) rotate(-45deg);
             transform: translate3d(0, 10px, 0) rotate(-45deg);
 }
@@ -947,7 +908,6 @@
 {
     transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
     transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19);
-    transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19), -webkit-transform .15s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--spring-r.is-active .hamburger-inner
@@ -970,8 +930,7 @@
     top: 0;
 
     transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), -webkit-transform .15s .32s cubic-bezier(.215, .61, .355, 1);
-    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .32s cubic-bezier(.215, .61, .355, 1);
-    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .32s cubic-bezier(.215, .61, .355, 1), -webkit-transform .15s .32s cubic-bezier(.215, .61, .355, 1); 
+    transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .32s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
 }
@@ -981,28 +940,24 @@
  */
 .hamburger--stand .hamburger-inner
 {
-    transition: background-color 0s .1s linear, -webkit-transform .1s .22s cubic-bezier(.55, .055, .675, .19);
-    transition: transform .1s .22s cubic-bezier(.55, .055, .675, .19), background-color 0s .1s linear;
-    transition: transform .1s .22s cubic-bezier(.55, .055, .675, .19), background-color 0s .1s linear, -webkit-transform .1s .22s cubic-bezier(.55, .055, .675, .19);
+    transition: -webkit-transform .1s .22s cubic-bezier(.55, .055, .675, .19), background-color 0s .1s linear;
+    transition:         transform .1s .22s cubic-bezier(.55, .055, .675, .19), background-color 0s .1s linear;
 }
 .hamburger--stand .hamburger-inner::before
 {
     transition: top .1s .1s ease-in, -webkit-transform .1s 0s cubic-bezier(.55, .055, .675, .19);
     transition: top .1s .1s ease-in, transform .1s 0s cubic-bezier(.55, .055, .675, .19);
-    transition: top .1s .1s ease-in, transform .1s 0s cubic-bezier(.55, .055, .675, .19), -webkit-transform .1s 0s cubic-bezier(.55, .055, .675, .19);
 }
 .hamburger--stand .hamburger-inner::after
 {
     transition: bottom .1s .1s ease-in, -webkit-transform .1s 0s cubic-bezier(.55, .055, .675, .19);
     transition: bottom .1s .1s ease-in, transform .1s 0s cubic-bezier(.55, .055, .675, .19);
-    transition: bottom .1s .1s ease-in, transform .1s 0s cubic-bezier(.55, .055, .675, .19), -webkit-transform .1s 0s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--stand.is-active .hamburger-inner
 {
-    transition: background-color 0s .22s linear, -webkit-transform .1s 0s cubic-bezier(.215, .61, .355, 1);
-    transition: transform .1s 0s cubic-bezier(.215, .61, .355, 1), background-color 0s .22s linear;
-    transition: transform .1s 0s cubic-bezier(.215, .61, .355, 1), background-color 0s .22s linear, -webkit-transform .1s 0s cubic-bezier(.215, .61, .355, 1); 
+    transition: -webkit-transform .1s 0s cubic-bezier(.215, .61, .355, 1), background-color 0s .22s linear;
+    transition:         transform .1s 0s cubic-bezier(.215, .61, .355, 1), background-color 0s .22s linear; 
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
 
@@ -1013,8 +968,7 @@
     top: 0;
 
     transition: top .1s .12s ease-out, -webkit-transform .1s .22s cubic-bezier(.215, .61, .355, 1);
-    transition: top .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1);
-    transition: top .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1), -webkit-transform .1s .22s cubic-bezier(.215, .61, .355, 1); 
+    transition: top .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
@@ -1023,8 +977,7 @@
     bottom: 0;
 
     transition: bottom .1s .12s ease-out, -webkit-transform .1s .22s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1), -webkit-transform .1s .22s cubic-bezier(.215, .61, .355, 1); 
+    transition: bottom .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
@@ -1034,28 +987,24 @@
  */
 .hamburger--stand-r .hamburger-inner
 {
-    transition: background-color 0s .1s linear, -webkit-transform .1s .22s cubic-bezier(.55, .055, .675, .19);
-    transition: transform .1s .22s cubic-bezier(.55, .055, .675, .19), background-color 0s .1s linear;
-    transition: transform .1s .22s cubic-bezier(.55, .055, .675, .19), background-color 0s .1s linear, -webkit-transform .1s .22s cubic-bezier(.55, .055, .675, .19);
+    transition: -webkit-transform .1s .22s cubic-bezier(.55, .055, .675, .19), background-color 0s .1s linear;
+    transition:         transform .1s .22s cubic-bezier(.55, .055, .675, .19), background-color 0s .1s linear;
 }
 .hamburger--stand-r .hamburger-inner::before
 {
     transition: top .1s .1s ease-in, -webkit-transform .1s 0s cubic-bezier(.55, .055, .675, .19);
     transition: top .1s .1s ease-in, transform .1s 0s cubic-bezier(.55, .055, .675, .19);
-    transition: top .1s .1s ease-in, transform .1s 0s cubic-bezier(.55, .055, .675, .19), -webkit-transform .1s 0s cubic-bezier(.55, .055, .675, .19);
 }
 .hamburger--stand-r .hamburger-inner::after
 {
     transition: bottom .1s .1s ease-in, -webkit-transform .1s 0s cubic-bezier(.55, .055, .675, .19);
     transition: bottom .1s .1s ease-in, transform .1s 0s cubic-bezier(.55, .055, .675, .19);
-    transition: bottom .1s .1s ease-in, transform .1s 0s cubic-bezier(.55, .055, .675, .19), -webkit-transform .1s 0s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--stand-r.is-active .hamburger-inner
 {
-    transition: background-color 0s .22s linear, -webkit-transform .1s 0s cubic-bezier(.215, .61, .355, 1);
-    transition: transform .1s 0s cubic-bezier(.215, .61, .355, 1), background-color 0s .22s linear;
-    transition: transform .1s 0s cubic-bezier(.215, .61, .355, 1), background-color 0s .22s linear, -webkit-transform .1s 0s cubic-bezier(.215, .61, .355, 1); 
+    transition: -webkit-transform .1s 0s cubic-bezier(.215, .61, .355, 1), background-color 0s .22s linear;
+    transition:         transform .1s 0s cubic-bezier(.215, .61, .355, 1), background-color 0s .22s linear; 
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
 
@@ -1066,8 +1015,7 @@
     top: 0;
 
     transition: top .1s .12s ease-out, -webkit-transform .1s .22s cubic-bezier(.215, .61, .355, 1);
-    transition: top .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1);
-    transition: top .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1), -webkit-transform .1s .22s cubic-bezier(.215, .61, .355, 1); 
+    transition: top .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
@@ -1076,8 +1024,7 @@
     bottom: 0;
 
     transition: bottom .1s .12s ease-out, -webkit-transform .1s .22s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1), -webkit-transform .1s .22s cubic-bezier(.215, .61, .355, 1); 
+    transition: bottom .1s .12s ease-out, transform .1s .22s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
@@ -1098,7 +1045,6 @@
 {
     transition: bottom .1s .34s ease-in, -webkit-transform .3s cubic-bezier(.55, .055, .675, .19);
     transition: bottom .1s .34s ease-in, transform .3s cubic-bezier(.55, .055, .675, .19);
-    transition: bottom .1s .34s ease-in, transform .3s cubic-bezier(.55, .055, .675, .19), -webkit-transform .3s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--spin.is-active .hamburger-inner
@@ -1121,8 +1067,7 @@
     bottom: 0;
 
     transition: bottom .1s ease-out, -webkit-transform .3s .14s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s ease-out, transform .3s .14s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s ease-out, transform .3s .14s cubic-bezier(.215, .61, .355, 1), -webkit-transform .3s .14s cubic-bezier(.215, .61, .355, 1); 
+    transition: bottom .1s ease-out, transform .3s .14s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
 }
@@ -1143,7 +1088,6 @@
 {
     transition: bottom .1s .34s ease-in, -webkit-transform .3s cubic-bezier(.55, .055, .675, .19);
     transition: bottom .1s .34s ease-in, transform .3s cubic-bezier(.55, .055, .675, .19);
-    transition: bottom .1s .34s ease-in, transform .3s cubic-bezier(.55, .055, .675, .19), -webkit-transform .3s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--spin-r.is-active .hamburger-inner
@@ -1166,8 +1110,7 @@
     bottom: 0;
 
     transition: bottom .1s ease-out, -webkit-transform .3s .14s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s ease-out, transform .3s .14s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s ease-out, transform .3s .14s cubic-bezier(.215, .61, .355, 1), -webkit-transform .3s .14s cubic-bezier(.215, .61, .355, 1); 
+    transition: bottom .1s ease-out, transform .3s .14s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
 }
@@ -1188,7 +1131,6 @@
 {
     transition: bottom .1s .14s ease, -webkit-transform .1s cubic-bezier(.55, .055, .675, .19);
     transition: bottom .1s .14s ease, transform .1s cubic-bezier(.55, .055, .675, .19);
-    transition: bottom .1s .14s ease, transform .1s cubic-bezier(.55, .055, .675, .19), -webkit-transform .1s cubic-bezier(.55, .055, .675, .19);
 }
 
 .hamburger--squeeze.is-active .hamburger-inner
@@ -1211,8 +1153,7 @@
     bottom: 0;
 
     transition: bottom .1s ease, -webkit-transform .1s .14s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s ease, transform .1s .14s cubic-bezier(.215, .61, .355, 1);
-    transition: bottom .1s ease, transform .1s .14s cubic-bezier(.215, .61, .355, 1), -webkit-transform .1s .14s cubic-bezier(.215, .61, .355, 1); 
+    transition: bottom .1s ease, transform .1s .14s cubic-bezier(.215, .61, .355, 1); 
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
 }
@@ -1240,7 +1181,6 @@
 {
     transition-property: bottom, -webkit-transform;
     transition-property: bottom, transform;
-    transition-property: bottom, transform, -webkit-transform;
 }
 
 .hamburger--vortex.is-active .hamburger-inner
@@ -1291,7 +1231,6 @@
 {
     transition-property: bottom, -webkit-transform;
     transition-property: bottom, transform;
-    transition-property: bottom, transform, -webkit-transform;
 }
 
 .hamburger--vortex-r.is-active .hamburger-inner
@@ -2253,7 +2192,7 @@ div.details
     }
     .dom-ready .intro
     {
-        transition: all linear .6s; 
+        transition: all ease-in-out 1.6s; 
         -webkit-transform: translateX(-50%) translateY(-50%);
                 transform: translateX(-50%) translateY(-50%);
 
