@@ -14,6 +14,12 @@ html {
 body {
 	margin: 0;
 	background: $black;
+	
+	@media all and (-ms-high-contrast:none)
+	{
+		body { overflow-x: hidden; } /* IE10 */
+		*::-ms-backdrop, body { overflow-x: hidden; } /* IE11 */
+	}
 }
 
 .container, .container-fluid {
