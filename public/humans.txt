@@ -1,0 +1,14 @@
+/* AGENCY */
+
+Agency: MMGY GLOBAL
+Site: http://www.mmgyglobal.com
+Location: Kansas City, Missouri, USA
+Twitter: @mmgyglobal
+
+
+
+/* TEAM */
+
+Lead Front End Developer: Caleb Zahnd - @calebzahnd
+Senior Interactive Art Director: Ashley Allen - @hey_doubleA
+
