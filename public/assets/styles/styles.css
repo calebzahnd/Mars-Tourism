@@ -1282,6 +1282,10 @@ body
 
     background: #000;
 }
+body.ie
+{
+    overflow-x: hidden;
+}
 
 .container,
 .container-fluid

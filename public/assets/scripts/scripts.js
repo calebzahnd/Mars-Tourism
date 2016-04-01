@@ -2512,6 +2512,7 @@ var main = {
         //main.introElements();
         //main.bookingElements();
         main.hal();
+        main.ie();
         main.pageReady();
     },
 
@@ -2771,6 +2772,19 @@ var main = {
         $('.details--expert--image').click(function() {
 	        audioElement.play();
         });
+
+
+	},
+	
+	//---------------------------------------------------------------------------------------------
+    // DETECT IE
+    //---------------------------------------------------------------------------------------------
+    ie: function() {
+
+		if(navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > 0) {
+		   /* Microsoft Internet Explorer detected in. */
+		   $('body').addClass('ie');
+		}
 
 
 	},
